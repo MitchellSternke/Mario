@@ -1,0 +1,424 @@
+<?xml version=1.0?>
+<resources>
+
+<animation id="mario_small">
+	<frame id="mario_small" image="smb3_mario_sheet.png" x="6" y="8" w="12" h="15" />
+</animation>
+
+<animation id="mario_small_walk">
+	<frame id="mario_small" time="6" />
+	<frame id="mario_small_move" x="34" w="15" h="16" />
+</animation>
+
+<animation id="mario_small_run" >
+	<frame id="mario_small" time="4" />
+	<frame id="mario_small_move" time="4" />
+</animation>
+
+<animation id="mario_small_sprint">
+	<frame image="smb3_mario_sheet.png" x="4" y="48" w="16" h="16" time="2" />
+	<frame x="34" />
+</animation>
+
+<animation id="mario_small_jump">
+	<frame image="smb3_mario_sheet.png" x="94" y="8" w="16" h="16" />
+</animation>
+
+<animation id="mario_small_turn" x_orientation="right">
+	<frame image="smb3_mario_sheet.png" x="155" y="8" w="14" h="16" />
+</animation>
+
+<animation id="mario_small_carrying">
+	<frame image="smb3_mario_sheet.png" x="100" y="48" w="14" h="16" />
+</animation>
+
+<animation id="mario_small_carrying_walk">
+	<frame image="smb3_mario_sheet.png" x="100" y="48" w="14" h="16" time="6"/>
+	<frame image="smb3_mario_sheet.png" x="130" y="48" w="15" h="16" />
+</animation>
+
+<animation id="mario_small_carrying_run">
+	<frame image="smb3_mario_sheet.png" x="100" y="48" w="14" h="16" time="4"/>
+	<frame image="smb3_mario_sheet.png" x="130" y="48" w="15" h="16" />
+</animation>
+
+<animation id="mario_small_carrying_sprint">
+	<frame image="smb3_mario_sheet.png" x="100" y="48" w="14" h="16" time="2"/>
+	<frame image="smb3_mario_sheet.png" x="130" y="48" w="15" h="16" />
+</animation>
+
+<animation id="mario_small_carrying_jump">
+	<frame image="smb3_mario_sheet.png" x="130" y="48" w="15" h="16" />
+</animation>
+
+<animation id="mario_small_kick">
+	<frame image="smb3_mario_sheet.png" x="184" y="8" w="16" h="16" time="10" />
+</animation>
+
+<animation id="mario_small_slide">
+	<frame image="smb3_mario_sheet.png" x="214" y="8" w="15" h="16" />
+</animation>
+
+<animation id="mario_small_swim">
+	<frame image="smb3_mario_sheet.png" x="184" y="48" w="16" h="16" />
+</animation>
+
+<animation id="mario_small_swim_move">
+	<frame image="smb3_mario_sheet.png" x="184" y="48" w="16" h="16" time="4" />
+	<frame x="213" />
+	<frame x="243" />
+</animation>
+
+<animation id="mario_small_sprint_jump">
+	<frame image="smb3_mario_sheet.png" x="154" y="48" w="16" h="16" />
+</animation>
+
+<animation id="mario_small_climb">
+	<frame image="smb3_mario_sheet.png" x="275" y="8" w="14" h="15" />
+</animation>
+
+<animation id="mario_small_climb_move">
+	<frame image="smb3_mario_sheet.png" x="275" y="8" w="14" h="15" time="8" />
+	<frame mirror_x="1" />
+</animation>
+
+<animation id="mario_small_front">
+	<frame image="smb3_mario_sheet.png" x="245" y="8" w="16" h="16" />
+</animation>
+
+<animation id="mario_super">
+	<frame id="mario_super" image="smb3_mario_sheet.png" x="5" y="82" w="14" h="27" />
+</animation>
+
+<animation id="mario_super_walk">
+	<frame id="mario_super" time="4" />
+	<frame x="34" y="82" w="16" h="27" />
+	<frame x="64" y="83" w="16" h="26" />
+	<frame x="34" y="82" w="16" h="27" />
+</animation>
+
+<animation id="mario_super_run">
+	<frame id="mario_super" time="3" />
+	<frame x="34" y="82" w="16" h="27" />
+	<frame x="64" y="83" w="16" h="26" />
+	<frame x="34" y="82" w="16" h="27" />
+</animation>
+
+<animation id="mario_super_sprint">
+	<frame image="smb3_mario_sheet.png" x="2" y="122" w="19" h="27" />
+	<frame x="32" />
+	<frame x="62" y="123" h="26" yo="-1" />
+	<frame x="32" y="122" h="27" yo="0" />
+</animation>
+
+<animation id="mario_super_jump">
+	<frame image="smb3_mario_sheet.png" x="94" y="83" w="16" h="26" />
+</animation>
+
+<animation id="mario_super_fall">
+	<frame image="smb3_mario_sheet.png" x="64" y="83" w="16" h="26" />
+</animation>
+
+<animation id="mario_super_turn" x_orientation="right">
+	<frame image="smb3_mario_sheet.png" x="154" y="82" w="16" h="28" />
+</animation>
+
+<animation id="mario_super_duck">
+	<frame image="smb3_mario_sheet.png" x="125" y="87" w="14" h="18" />
+</animation>
+
+<animation id="mario_super_carrying">
+	<frame image="smb3_mario_sheet.png" x="100" y="122" w="14" h="27" />
+</animation>
+
+<animation id="mario_super_carrying_walk">
+	<frame image="smb3_mario_sheet.png" x="100" y="122" w="16" h="27" time="4" />
+	<frame image="smb3_mario_sheet.png" x="130" y="122" w="16" h="27" />
+	<frame image="smb3_mario_sheet.png" x="159" y="123" w="16" h="26" yo="-1" />
+</animation>
+
+<animation id="mario_super_carrying_run">
+	<frame image="smb3_mario_sheet.png" x="100" y="122" w="16" h="27" time="3" />
+	<frame image="smb3_mario_sheet.png" x="130" y="122" w="16" h="27" />
+	<frame image="smb3_mario_sheet.png" x="159" y="123" w="16" h="26" yo="-1" />
+</animation>
+
+<animation id="mario_super_carrying_sprint">
+	<frame image="smb3_mario_sheet.png" x="100" y="122" w="16" h="27" time="1" />
+	<frame image="smb3_mario_sheet.png" x="130" y="122" w="16" h="27" />
+	<frame image="smb3_mario_sheet.png" x="159" y="123" w="16" h="26" yo="-1" />
+</animation>
+
+<animation id="mario_super_carrying_jump">
+	<frame image="smb3_mario_sheet.png" x="159" y="123" w="16" h="26" />
+</animation>
+
+<animation id="mario_super_kick">
+	<frame image="smb3_mario_sheet.png" x="181" y="82" w="21" h="27" time="10" />
+</animation>
+
+<animation id="mario_super_slide">
+	<frame image="smb3_mario_sheet.png" x="214" y="83" w="16" h="26" />
+</animation>
+
+<animation id="mario_super_swim">
+	<frame image="smb3_mario_sheet.png" x="182" y="122" w="19" h="27" />
+</animation>
+
+<animation id="mario_super_swim_move">
+	<frame image="smb3_mario_sheet.png" x="182" y="122" w="19" h="27" time="4" />
+	<frame x="212" />
+	<frame x="242" />
+</animation>
+
+<animation id="mario_super_sprint_jump">
+	<frame image="smb3_mario_sheet.png" x="242" y="123" w="19" h="26" />
+</animation>
+
+<animation id="mario_super_climb">
+	<frame image="smb3_mario_sheet.png" x="244" y="83" w="16" h="25" />
+</animation>
+
+<animation id="mario_super_climb_move">
+	<frame image="smb3_mario_sheet.png" x="244" y="83" w="16" h="25" time="8" />
+	<frame mirror_x="1" />
+</animation>
+
+<animation id="mario_super_front">
+	<frame image="smb3_mario_sheet.png" x="274" y="122" w="16" h="27" />
+</animation>
+
+<animation id="mario_fire">
+	<frame id="mario_fire" image="smb3_mario_sheet.png" x="5" y="162" w="14" h="27" />
+</animation>
+
+<animation id="mario_fire_walk">
+	<frame id="mario_fire" time="4" />
+	<frame x="34" y="162" w="16" h="27" />
+	<frame x="64" y="163" w="16" h="26" />
+	<frame x="34" y="162" w="16" h="27" />
+</animation>
+
+<animation id="mario_fire_run">
+	<frame id="mario_fire" time="3" />
+	<frame x="34" y="162" w="16" h="27" />
+	<frame x="64" y="163" w="16" h="26" />
+	<frame x="34" y="162" w="16" h="27" />
+</animation>
+
+<animation id="mario_fire_sprint">
+	<frame image="smb3_mario_sheet.png" x="2" y="202" w="19" h="27" />
+	<frame x="32" />
+	<frame x="62" y="203" h="26" yo="-1" />
+	<frame x="32" y="202" h="27" yo="0" />
+</animation>
+
+<animation id="mario_fire_jump">
+	<frame image="smb3_mario_sheet.png" x="94" y="163" w="16" h="26" />
+</animation>
+
+<animation id="mario_fire_fall">
+	<frame image="smb3_mario_sheet.png" x="64" y="163" w="16" h="26" />
+</animation>
+
+<animation id="mario_fire_turn" x_orientation="right">
+	<frame image="smb3_mario_sheet.png" x="154" y="162" w="16" h="28" />
+</animation>
+
+<animation id="mario_fire_throw">
+	<frame image="smb3_mario_sheet.png" x="275" y="202" w="14" h="27" time="4" />
+	<frame x="305" />
+</animation>
+
+<animation id="mario_fire_duck">
+	<frame image="smb3_mario_sheet.png" x="125" y="167" w="14" h="18" />
+</animation>
+
+<animation id="mario_fire_carrying">
+	<frame image="smb3_mario_sheet.png" x="100" y="202" w="14" h="27" />
+</animation>
+
+<animation id="mario_fire_carrying_walk">
+	<frame image="smb3_mario_sheet.png" x="100" y="202" w="16" h="27" time="4" />
+	<frame image="smb3_mario_sheet.png" x="130" y="202" w="16" h="27" />
+	<frame image="smb3_mario_sheet.png" x="159" y="203" w="16" h="26" yo="-1" />
+</animation>
+
+<animation id="mario_fire_carrying_run">
+	<frame image="smb3_mario_sheet.png" x="100" y="202" w="16" h="27" time="3" />
+	<frame image="smb3_mario_sheet.png" x="130" y="202" w="16" h="27" />
+	<frame image="smb3_mario_sheet.png" x="159" y="203" w="16" h="26" yo="-1" />
+</animation>
+
+<animation id="mario_fire_carrying_sprint">
+	<frame image="smb3_mario_sheet.png" x="100" y="202" w="16" h="27" time="1" />
+	<frame image="smb3_mario_sheet.png" x="130" y="202" w="16" h="27" />
+	<frame image="smb3_mario_sheet.png" x="159" y="203" w="16" h="26" yo="-1" />
+</animation>
+
+<animation id="mario_fire_carrying_jump">
+	<frame image="smb3_mario_sheet.png" x="159" y="203" w="16" h="26" />
+</animation>
+
+<animation id="mario_fire_kick">
+	<frame image="smb3_mario_sheet.png" x="181" y="162" w="21" h="27" time="10" />
+</animation>
+
+<animation id="mario_fire_slide">
+	<frame image="smb3_mario_sheet.png" x="214" y="163" w="16" h="26" />
+</animation>
+
+<animation id="mario_fire_swim">
+	<frame image="smb3_mario_sheet.png" x="182" y="202" w="19" h="27" />
+</animation>
+
+<animation id="mario_fire_swim_move">
+	<frame image="smb3_mario_sheet.png" x="182" y="202" w="19" h="27" time="4" />
+	<frame x="212" />
+	<frame x="242" />
+</animation>
+
+<animation id="mario_fire_sprint_jump">
+	<frame image="smb3_mario_sheet.png" x="242" y="203" w="19" h="27" />
+</animation>
+
+<animation id="mario_fire_climb">
+	<frame image="smb3_mario_sheet.png" x="244" y="163" w="16" h="25" />
+</animation>
+
+<animation id="mario_fire_climb_move">
+	<frame image="smb3_mario_sheet.png" x="244" y="163" w="16" h="25" time="8" />
+	<frame mirror_x="1" />
+</animation>
+
+<animation id="mario_fire_front">
+	<frame image="smb3_mario_sheet.png" x="334" y="202" w="16" h="27" />
+</animation>
+
+<animation id="mario_tail">
+	<frame id="mario_tail" image="smb3_mario_sheet.png" x="1" y="401" w="21" h="29" xo="3" />
+</animation>
+
+<animation id="mario_tail_walk">
+	<frame id="mario_tail" time="4" />
+	<frame x="31" y="401" w="22" h="29" />
+	<frame x="60" y="402" w="23" h="27" />
+	<frame x="31" y="401" w="22" h="29" />
+</animation>
+
+<animation id="mario_tail_run">
+	<frame id="mario_tail" time="3" />
+	<frame x="31" y="401" w="22" h="29" />
+	<frame x="60" y="402" w="23" h="27" />
+	<frame x="31" y="401" w="22" h="29" />
+</animation>
+
+<animation id="mario_tail_sprint">
+	<frame image="smb3_mario_sheet.png" x="1" y="442" w="23" h="28" xo="2" />
+	<frame x="26" />
+	<frame x="52" />
+	<frame x="26" />
+</animation>
+
+<animation id="mario_tail_jump">
+	<frame image="smb3_mario_sheet.png" x="90" y="402" w="23" h="27" xo="3" />
+</animation>
+
+<animation id="mario_tail_fall">
+	<frame image="smb3_mario_sheet.png" x="60" y="402" w="23" h="27" xo="3" />
+</animation>
+
+<animation id="mario_tail_turn" x_orientation="right">
+	<frame image="smb3_mario_sheet.png" x="154" y="401" w="16" h="29" />
+</animation>
+
+<animation id="mario_tail_duck">
+	<frame image="smb3_mario_sheet.png" x="121" y="407" w="21" h="18" xo="4" />
+</animation>
+
+<animation id="mario_tail_carrying">
+	<frame image="smb3_mario_sheet.png" x="89" y="441" w="21" h="29" xo="3" />
+</animation>
+
+<animation id="mario_tail_carrying_walk">
+	<frame image="smb3_mario_sheet.png" x="89" y="441" w="22" h="29" xo="3" time="4" />
+	<frame image="smb3_mario_sheet.png" x="122" y="441" w="23" h="29" xo="3" />
+	<frame image="smb3_mario_sheet.png" x="157" y="441" w="23" h="29" xo="3" />
+</animation>
+
+<animation id="mario_tail_carrying_run">
+	<frame image="smb3_mario_sheet.png" x="89" y="441" w="22" h="29" xo="3" time="3" />
+	<frame image="smb3_mario_sheet.png" x="122" y="441" w="23" h="29" xo="3" />
+	<frame image="smb3_mario_sheet.png" x="157" y="441" w="23" h="29" xo="3" />
+</animation>
+
+<animation id="mario_tail_carrying_sprint">
+	<frame image="smb3_mario_sheet.png" x="89" y="441" w="22" h="29" xo="3" time="1" />
+	<frame image="smb3_mario_sheet.png" x="122" y="441" w="23" h="29" xo="3" />
+	<frame image="smb3_mario_sheet.png" x="157" y="441" w="23" h="29" xo="3" />
+</animation>
+
+<animation id="mario_tail_carrying_jump">
+	<frame image="smb3_mario_sheet.png" x="157" y="441" w="23" h="29" xo="3" />
+</animation>
+
+<animation id="mario_tail_kick">
+	<frame image="smb3_mario_sheet.png" x="181" y="402" w="21" h="28" time="10" />
+</animation>
+
+<animation id="mario_tail_slide">
+	<frame image="smb3_mario_sheet.png" x="209" y="402" w="16" h="27" />
+</animation>
+
+<animation id="mario_tail_swim">
+	<frame image="smb3_mario_sheet.png" x="180" y="442" w="24" h="28" xo="2" />
+</animation>
+
+<animation id="mario_tail_swim_move">
+	<frame image="smb3_mario_sheet.png" x="180" y="442" w="24" h="28" xo="2" time="4" />
+	<frame x="210" />
+	<frame x="240" />
+</animation>
+
+<animation id="mario_tail_sprint_jump">
+	<frame image="smb3_mario_sheet.png" x="240" y="442" w="24" h="28" xo="2" />
+</animation>
+
+<animation id="mario_tail_climb">
+	<frame image="smb3_mario_sheet.png" x="229" y="402" w="16" h="28" />
+</animation>
+
+<animation id="mario_tail_climb_move">
+	<frame image="smb3_mario_sheet.png" x="229" y="402" w="16" h="28" time="8" />
+	<frame mirror_x="1" />
+</animation>
+
+<animation id="mario_tail_front">
+	<frame image="smb3_mario_sheet.png" x="274" y="401" w="16" h="29" />
+</animation>
+
+<animation id="mario_tail_flight">
+	<frame image="smb3_mario_sheet.png" x="240" y="442" w="24" h="28" xo="2" time="4" />
+	<frame x="360" />
+	<frame x="330" />
+	<frame x="360" />
+</animation>
+
+<animation id="mario_tail_descent">
+	<frame image="smb3_mario_sheet.png" x="60" y="402" w="23" h="27" xo="3" time="4" />
+	<frame x="270" y="442" />
+	<frame x="301" h="28" yo="1" />
+	<frame x="270" h="27" yo="0" />
+</animation>
+
+<animation id="mario_tail_spin" x_orientation="right">
+	<frame image="smb3_mario_sheet.png" x="274" y="401" w="16" h="29" time="4" />
+	<frame x="390" y="441" w="23" xo="4" />
+	<frame x="254" y="401" w="16" xo="0" />
+</animation>
+
+<animation id="mario_dead">
+	<frame image="smb3_mario_sheet.png" x="424" y="48" w="16" h="16" />
+</animation>
+
+</resources>

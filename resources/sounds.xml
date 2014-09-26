@@ -1,0 +1,32 @@
+<?xml version=1.0?>
+<resources>
+
+<sound id="1up" file="smb3_1up.wav" />
+<sound id="blast" file="smb3_blast.wav" />
+<sound id="bump" file="smb3_bump.wav" />
+<sound id="brick_break" file="smb3_brick_break.wav" />
+<sound id="coin_get" file="smb3_coin.wav" />
+<sound id="count" file="smb3_count.wav" />
+<sound id="hit_1" file="smb3_hit_1.wav" />
+<sound id="hit_2" file="smb3_hit_2.wav" />
+<sound id="hit_3" file="smb3_hit_3.wav" />
+<sound id="hit_4" file="smb3_hit_4.wav" />
+<sound id="hit_5" file="smb3_hit_5.wav" />
+<sound id="hit_6" file="smb3_hit_6.wav" />
+<sound id="hit_7" file="smb3_hit_7.wav" />
+<sound id="jump" file="smb3_jump.wav" />
+<sound id="kick" file="smb3_kick.wav" />
+<sound id="level_enter" file="smb3_level_enter.wav" />
+<sound id="map_move" file="smb3_map_move.wav" />
+<sound id="map_reveal" file="smw_map_reveal.wav" />
+<sound id="powerdown" file="smb3_powerdown.wav" />
+<sound id="powerup" file="smb3_powerup.wav" />
+<sound id="reserve_item" file="smw_reserve_item.wav" />
+<sound id="reserve_item_drop" file="smw_reserve_item_drop.wav" />
+<sound id="spin" file="smb3_spin.wav" />
+<sound id="sprout" file="smb3_sprout.wav" />
+<sound id="stomp" file="smb3_stomp.wav" />
+<sound id="swim" file="smb3_swim.wav" />
+<sound id="throw" file="smb3_throw.wav" />
+
+</resources>

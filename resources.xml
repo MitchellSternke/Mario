@@ -1,0 +1,1213 @@
+<?xml version=1.0?>
+<resources>
+
+<!-- Music -->
+<import file="music.xml" />
+
+<!-- Sounds -->
+<import file="sounds.xml" />
+
+<!-- Fonts -->
+<font id="font_main" file="smb3_font.png" width="8" height="8" >
+	<char id="A" x="0" y="0" number="5" />
+	<char id="G" x="40" y="0" number="15" />
+	<char id="V" x="0" y="8" number="5" />
+	<char id="a" x="40" y="8" number="15" />
+	<char id="p" x="0" y="16" number="11" />
+	<char id="0" x="96" y="16" number="4" />
+	<char id="$" x="128" y="16" />
+	<char id="." x="136" y="16" />
+	<char id="!" x="144" y="16" />
+	<char id="?" x="152" y="16" />
+</font>
+
+<font id="font_bold" file="smb3_font.png" width="8" height="8" >
+	<char id="A" x="0" y="25" number="16" />
+	<char id="Q" x="0" y="33" number="10" />
+	<char id="a" x="0" y="25" number="16" />
+	<char id="q" x="0" y="33" number="10" />
+	<char id="0" x="0" y="41" number="10" />
+</font>
+
+<!-- Animations -->
+<animation id="smb3_tiles">
+	<frame image="smb3_tiles.png" w="16" h="16" x_stride="1" y_stride="1" />
+</animation>
+
+<animation id="brick">
+	<frame animation="smb3_tiles" index="1d" time="10" />
+	<frame animation="smb3_tiles" index="1e" />
+	<frame animation="smb3_tiles" index="1f" />
+	<frame animation="smb3_tiles" index="20" />
+</animation>
+
+<animation id="question_block">
+	<frame animation="smb3_tiles" index="0" time="10" />
+	<frame animation="smb3_tiles" index="1" />
+	<frame animation="smb3_tiles" index="2" />
+	<frame animation="smb3_tiles" index="3" />
+</animation>
+
+<animation id="block_dead">
+	<frame animation="smb3_tiles" index="76" />
+</animation>
+
+<animation id="wood_block">
+	<frame animation="smb3_tiles" index="24" />
+</animation>
+
+<animation id="ice_block">
+	<frame animation="smb3_tiles" index="d9" />
+</animation>
+
+<animation id="coin">
+	<frame image="smb3_coin.png" w="6" h="16" time="8" />
+	<frame x="6" w="10" />
+	<frame x="16" w="14" />
+	<frame x="30" w="10" />
+</animation>
+
+<import file="mario.xml" />
+
+<animation id="goomba">
+	<frame image="smb3_enemies.png" x="15" y="4" w="16" h="16" time="8"/>
+	<frame x="65" y="4" />
+</animation>
+
+<animation id="goomba_dead">
+	<frame image="smb3_enemies.png" x="315" y="7" w="16" h="9" />
+</animation>
+
+<animation id="koopa">
+	<frame image="smb3_enemies.png" x="125" y="98" w="16" h="27" time="8" />
+	<frame x="165" y="99" h="26" />
+</animation>
+
+<animation id="shell">
+	<frame id="shell" image="smb3_enemies.png" x="50" y="104" w="16" h="16" />
+</animation>
+
+<animation id="shell_spinning">
+	<frame id="shell" time="2" />
+	<frame x="15" y="104" />
+	<frame y="129" />
+	<frame y="154" />
+</animation>
+
+<animation id="smb3_plant_vertical">
+	<frame image="smb3_enemies.png" x="15" y="495" w="16" h="33" time="5" />
+	<frame x="65" />
+</animation>
+
+<animation id="smb3_plant_horizontal">
+	<frame image="smb3_enemies.png" x="211" y="654" w="24" h="16" time="5" />
+	<frame x="260" />
+</animation>
+
+<animation id="smb3_bill_blaster">
+	<frame image="smb3_enemies.png" x="215" y="1145" w="16" h="33" />
+</animation>
+
+<animation id="smb3_bill_blaster_short">
+	<frame image="smb3_enemies.png" x="265" y="1153" w="16" h="17" />
+</animation>
+
+<animation id="smb3_bullet_bill">
+	<frame image="smb3_enemies.png" x="315" y="1155" w="16" h="14" />
+</animation>
+
+<animation id="smb3_buzzy_beetle">
+	<frame image="smb3_enemies.png" x="15" y="1004" w="16" h="16" time="8" />
+	<frame x="65" />
+</animation>
+
+<animation id="smb3_buzzy_beetle_shell">
+	<frame image="smb3_enemies.png" x="215" y="1004" w="16" h="16" />
+</animation>
+
+<animation id="smb3_buzzy_beetle_shell_spinning">
+	<frame image="smb3_enemies.png" x="215" y="1004" w="16" h="16" time="2" />
+	<frame x="265" />
+	<frame x="365" />
+	<frame x="265" mirror_x="1" />
+</animation>
+
+<animation id="smb3_spiny">
+	<frame image="smb3_enemies.png" x="15" y="754" w="16" h="16" time="8" />
+	<frame x="65" y="753" />
+</animation>
+
+<animation id="smb3_lakitu">
+	<frame image="smb3_enemies.png" x="15" y="696" w="16" h="31" time="6" />
+	<frame x="65" />
+</animation>
+
+<animation id="smb3_lakitu_ducking">
+	<frame image="smb3_enemies.png" x="115" y="697" w="16" h="29" time="6" />
+	<frame x="165" y="699" h="25" />
+	<frame x="215" y="700" h="24" />
+</animation>
+
+<animation id="smb3_lakitu_throwing">
+	<frame image="smb3_enemies.png" x="215" y="700" w="16" h="24" />
+</animation>
+
+<animation id="smb3_spiny_egg">
+	<frame image="smb3_enemies.png" x="335" y="704" w="16" h="16" time="4" />
+	<frame x="375" />
+</animation>
+
+<animation id="smb3_paratroopa">
+	<frame image="smb3_enemies.png" x="45" y="148" w="16" h="27" time="4" />
+	<frame x="85" y="149" h="26" />
+	<frame x="125" y="148" h="28" />
+	<frame x="165" h="27" />
+</animation>
+
+<animation id="smb3_hammer_bro">
+	<frame image="smb3_enemies.png" x="65" y="850" w="16" h="24" time="10" />
+	<frame x="115" />
+</animation>
+
+<animation id="smb3_hammer_bro_throw">
+	<frame image="smb3_enemies.png" x="15" y="850" w="16" h="24" time="20" />
+</animation>
+
+<animation id="smb3_hammer">
+	<frame image="smb3_enemies.png" x="375" y="840" w="16" h="16" time="4" />
+	<frame x="353" y="840" />
+	<frame x="327" y="840" />
+	<frame x="305" y="840" />
+	<frame x="305" y="840" mirror_y="1" />
+	<frame x="327" y="840" mirror_y="1" />
+	<frame x="353" y="840" mirror_y="1" />
+	<frame x="375" y="840" mirror_y="1" />
+</animation>
+
+<animation id="mushroom">
+	<frame image="smb3_items.png" x="45" w="16" h="16" />
+</animation>
+
+<animation id="flower">
+	<frame image="smb3_items.png" x="90" w="16" h="16" />
+</animation>
+
+<animation id="fireball">
+	<frame image="smb3_enemies.png" x="114" y="657" w="8" h="8" time="4" />
+	<frame x="134" y="658" />
+	<frame x="154" y="657" />
+	<frame x="174" y="658" />
+</animation>
+
+<animation id="star">
+	<frame image="smb3_items.png" x="270" w="16" h="16" time="4" />
+	<frame x="315" />
+	<frame x="360" />
+	<frame x="405" />
+</animation>
+
+<animation id="leaf">
+	<frame image="smb3_items.png" x="135" w="15" h="16" />
+</animation>
+
+<animation id="bush">
+	<frame image="smb3_tiles.png" x="119" w="16" h="16" />
+</animation>
+
+<animation id="smb3_vine">
+	<frame animation="smb3_tiles" index="1aa" time="10" />
+	<frame animation="smb3_tiles" index="1ab" />
+	<frame animation="smb3_tiles" index="1ac" />
+	<frame animation="smb3_tiles" index="1ad" />
+</animation>
+
+<animation id="smb3_plant_head">
+	<frame image="smb3_enemies.png" x="115" y="504" w="16" h="16" time="5" />
+	<frame x="165" />
+</animation>
+
+<animation id="brick_particle">
+	<frame image="smb3_brick_particle.png" w="8" h="8" time="8" />
+	<frame x="8" />
+</animation>
+
+<animation id="coin_particle">
+	<frame image="smb3_coin_particle.png" x="4" y="1" w="8" h="14" time="6" />
+	<frame x="6" y="17" w="4" />
+	<frame x="8" y="33" w="1" />
+	<frame x="6" y="49" w="4" />
+</animation>
+
+<animation id="coin_explosion">
+	<frame image="smb3_coin_particle.png" y="64" w="16" h="16" time="6" />
+	<frame y="80" />
+	<frame y="96" />
+</animation>
+
+<animation id="coin_sparkle">
+	<frame image="smb3_coin_sparkle.png" y="10" w="5" h="5" time="4" />
+	<frame y="5" />
+	<frame y="0" />
+	<frame y="5" />
+	<frame y="10" />
+</animation>
+
+<animation id="fireball_smoke">
+	<frame image="smb3_effects.png" y="43" w="16" h="16" time="4" />
+	<frame x="17" />
+	<frame x="34" />
+	<frame x="51" />
+</animation>
+
+<animation id="hit">
+	<frame image="smb3_effects.png" y="26" w="16" h="16" time ="4" />
+	<frame x="17" />
+	<frame x="34" />
+	<frame x="51" />
+</animation>
+
+<animation id="slide_smoke">
+	<frame image="smb3_effects.png" y="17" w="7" h="8" time="4" />
+	<frame x="8" />
+	<frame x="16" />
+	<frame x="24" />
+</animation>
+
+<animation id="level_end_block">
+	<frame image="smb3_items.png" w="16" h="16" />
+</animation>
+
+<!-- HUD Animations -->
+<animation id="mario_indicator">
+	<frame image="smb3_hud.png" w="13" h="7" />
+</animation>
+
+<animation id="times">
+	<frame image="smb3_hud.png" x="13" w="8" h="7" />
+</animation>
+
+<animation id="time_indicator">
+	<frame image="smb3_hud.png" x="21" w="8" h="7" />
+</animation>
+
+<animation id="coin_indicator">
+	<frame image="smb3_hud.png" x="37" y="8" w="8" h="8" />
+</animation>
+
+<animation id="p_meter_bar_empty">
+	<frame image="smb3_hud.png" x="101" y="1" w="8" h="8" />
+</animation>
+
+<animation id="p_meter_bar_full">
+	<frame image="smb3_hud.png" x="101" y="9" w="8" h="8" />
+</animation>
+
+<animation id="p_meter_empty">
+	<frame image="smb3_hud.png" x="109" w="12" h="8" />
+</animation>
+
+<animation id="p_meter_full">
+	<frame image="smb3_hud.png" x="109" w="12" h="8" time="8" />
+	<frame image="smb3_hud.png" x="109" y="9" w="12" h="8" />
+</animation>
+
+<animation id="reserve_item_box">
+	<frame image="smw_reserve_item_box.png" w="28" h="28" />
+</animation>
+
+<!-- Score animations -->
+<animation id="score_100">
+	<frame image="smb3_scores.png" x="1" w="11" h="8" />
+</animation>
+
+<animation id="score_200">
+	<frame image="smb3_scores.png" x="13" w="12" h="8" />
+</animation>
+
+<animation id="score_400">
+	<frame image="smb3_scores.png" x="26" w="12" h="8" />
+</animation>
+
+<animation id="score_800">
+	<frame image="smb3_scores.png" x="39" w="12" h="8" />
+</animation>
+
+<animation id="score_1000">
+	<frame image="smb3_scores.png" x="52" w="15" h="8" />
+</animation>
+
+<animation id="score_2000">
+	<frame image="smb3_scores.png" x="68" w="16" h="8" />
+</animation>
+
+<animation id="score_4000">
+	<frame image="smb3_scores.png" x="85" w="16" h="8" />
+</animation>
+
+<animation id="score_8000">
+	<frame image="smb3_scores.png" x="102" w="16" h="8" />
+</animation>
+
+<animation id="score_1up">
+	<frame image="smb3_scores.png" x="119" w="16" h="8" />
+</animation>
+
+<!-- Map movement animations -->
+<animation id="map_mario">
+	<frame image="smw_map_mario.png" x="16" y="9" w="12" h="15" />
+</animation>
+
+<animation id="map_mario_climb">
+	<frame image="smw_map_mario.png" x="1" y="26" w="14" h="16" time="8" />
+	<frame x="16" />
+</animation>
+
+<animation id="map_mario_swim_down">
+	<frame image="smw_map_mario.png" x="31" y="26" w="14" h="12" time="8" />
+	<frame x="46" w="16" h="11" />
+</animation>
+
+<animation id="map_mario_swim_side">
+	<frame image="smw_map_mario.png" x="63" y="26" w="14" h="12" time="8" />
+	<frame x="78" w="16" h="11" />
+</animation>
+
+<animation id="map_mario_swim_up">
+	<frame image="smw_map_mario.png" x="95" y="26" w="14" h="12" time="8" />
+	<frame x="110" w="16" h="11" />
+</animation>
+
+<animation id="map_mario_walk_down">
+	<frame image="smw_map_mario.png" x="16" y="9" w="12" h="15" time="8" />
+	<frame x="1" w="14" />
+	<frame x="16" w="12" />
+	<frame x="29" w="14" />
+</animation>
+
+<animation id="map_mario_walk_side">
+	<frame image="smw_map_mario.png" x="44" y="9" w="15" h="16" time="8" />
+	<frame x="60" w="12" h="15" />
+</animation>
+
+<animation id="map_mario_walk_up">
+	<frame image="smw_map_mario.png" x="87" y="9" w="12" h="15" time="8" />
+	<frame x="73" w="13" h="16" />
+	<frame x="87" w="12" h="15" />
+	<frame x="100" w="13" h="16" />
+</animation>
+
+<!-- Text things -->
+<animation id="mario_start_text">
+	<frame image="smw_text.png" w="105" h="16" />
+</animation>
+
+<animation id="luigi_start_text">
+	<frame image="smw_text.png" y="17" w="102" h="16" />
+</animation>
+
+<animation id="game_over_text">
+	<frame image="smw_text.png" y="34" w="80" h="16" />
+</animation>
+
+<animation id="time_up_text">
+	<frame image="smw_text.png" y="51" w="78" h="16" />
+</animation>
+
+<!-- Level icon animations -->
+<animation id="level_single_exit">
+	<frame image="smw_level_icons.png" w="16" h="16" time="10" />
+	<frame y="17" />
+	<frame y="34" />
+	<frame y="51" />
+	<frame y="34" />
+	<frame y="17" />
+</animation>
+
+<animation id="level_multiple_exits">
+	<frame image="smw_level_icons.png" x="16" w="16" h="16" time="10" />
+	<frame y="17" />
+	<frame y="34" />
+	<frame y="51" />
+	<frame y="34" />
+	<frame y="17" />
+</animation>
+
+<!-- Animations used to store tiles for the map -->
+<animation id="map_tiles">
+	<frame image="smw_map_tiles.png" w="8" h="8" x_stride="1" y_stride="1" />
+</animation>
+
+<!-- Animations used for tilesets -->
+<animation id="metal_box_blue_nw">
+	<frame animation="smb3_tiles" index="5d" />
+</animation>
+
+<animation id="metal_box_blue_n">
+	<frame animation="smb3_tiles" index="5e" />
+</animation>
+
+<animation id="metal_box_blue_ne">
+	<frame animation="smb3_tiles" index="5f" />
+</animation>
+
+<animation id="metal_box_blue_w">
+	<frame animation="smb3_tiles" index="77" />
+</animation>
+
+<animation id="metal_box_blue">
+	<frame animation="smb3_tiles" index="78" />
+</animation>
+
+<animation id="metal_box_blue_e">
+	<frame animation="smb3_tiles" index="79" />
+</animation>
+
+<animation id="metal_box_blue_sw">
+	<frame animation="smb3_tiles" index="94" />
+</animation>
+
+<animation id="metal_box_blue_s">
+	<frame animation="smb3_tiles" index="95" />
+</animation>
+
+<animation id="metal_box_blue_se">
+	<frame animation="smb3_tiles" index="96" />
+</animation>
+
+<animation id="metal_box_green_nw">
+	<frame animation="smb3_tiles" index="c" />
+</animation>
+
+<animation id="metal_box_green_n">
+	<frame animation="smb3_tiles" index="d" />
+</animation>
+
+<animation id="metal_box_green_ne">
+	<frame animation="smb3_tiles" index="e" />
+</animation>
+
+<animation id="metal_box_green_w">
+	<frame animation="smb3_tiles" index="29" />
+</animation>
+
+<animation id="metal_box_green">
+	<frame animation="smb3_tiles" index="2a" />
+</animation>
+
+<animation id="metal_box_green_e">
+	<frame animation="smb3_tiles" index="2b" />
+</animation>
+
+<animation id="metal_box_green_sw">
+	<frame animation="smb3_tiles" index="46" />
+</animation>
+
+<animation id="metal_box_green_s">
+	<frame animation="smb3_tiles" index="47" />
+</animation>
+
+<animation id="metal_box_green_se">
+	<frame animation="smb3_tiles" index="48" />
+</animation>
+
+<animation id="metal_box_red_nw">
+	<frame animation="smb3_tiles" index="8" />
+</animation>
+
+<animation id="metal_box_red_n">
+	<frame animation="smb3_tiles" index="9" />
+</animation>
+
+<animation id="metal_box_red_ne">
+	<frame animation="smb3_tiles" index="a" />
+</animation>
+
+<animation id="metal_box_red_w">
+	<frame animation="smb3_tiles" index="25" />
+</animation>
+
+<animation id="metal_box_red">
+	<frame animation="smb3_tiles" index="26" />
+</animation>
+
+<animation id="metal_box_red_e">
+	<frame animation="smb3_tiles" index="27" />
+</animation>
+
+<animation id="metal_box_red_sw">
+	<frame animation="smb3_tiles" index="42" />
+</animation>
+
+<animation id="metal_box_red_s">
+	<frame animation="smb3_tiles" index="43" />
+</animation>
+
+<animation id="metal_box_red_se">
+	<frame animation="smb3_tiles" index="44" />
+</animation>
+
+<animation id="metal_box_white_nw">
+	<frame animation="smb3_tiles" index="61" />
+</animation>
+
+<animation id="metal_box_white_n">
+	<frame animation="smb3_tiles" index="62" />
+</animation>
+
+<animation id="metal_box_white_ne">
+	<frame animation="smb3_tiles" index="63" />
+</animation>
+
+<animation id="metal_box_white_w">
+	<frame animation="smb3_tiles" index="7b" />
+</animation>
+
+<animation id="metal_box_white">
+	<frame animation="smb3_tiles" index="7c" />
+</animation>
+
+<animation id="metal_box_white_e">
+	<frame animation="smb3_tiles" index="7d" />
+</animation>
+
+<animation id="metal_box_white_sw">
+	<frame animation="smb3_tiles" index="98" />
+</animation>
+
+<animation id="metal_box_white_s">
+	<frame animation="smb3_tiles" index="99" />
+</animation>
+
+<animation id="metal_box_white_se">
+	<frame animation="smb3_tiles" index="9a" />
+</animation>
+
+<animation id="pipe_h_green_nw">
+	<frame animation="smb3_tiles" index="92" />
+</animation>
+
+<animation id="pipe_h_green_sw">
+	<frame animation="smb3_tiles" index="ae" />
+</animation>
+
+<animation id="pipe_h_green_ne">
+	<frame animation="smb3_tiles" index="92" mirror_x="1" />
+</animation>
+
+<animation id="pipe_h_green_se">
+	<frame animation="smb3_tiles" index="ae" mirror_x="1" />
+</animation>
+
+<animation id="pipe_h_green_n">
+	<frame animation="smb3_tiles" index="93" />
+</animation>
+
+<animation id="pipe_h_green_s">
+	<frame animation="smb3_tiles" index="af" />
+</animation>
+
+<animation id="pipe_v_green_sw">
+	<frame animation="smb3_tiles" index="90" mirror_y="1" />
+</animation>
+
+<animation id="pipe_v_green_se">
+	<frame animation="smb3_tiles" index="91" mirror_y="1" />
+</animation>
+
+<animation id="pipe_v_green_nw">
+	<frame animation="smb3_tiles" index="90" />
+</animation>
+
+<animation id="pipe_v_green_ne">
+	<frame animation="smb3_tiles" index="91" />
+</animation>
+
+<animation id="pipe_v_green_w">
+	<frame animation="smb3_tiles" index="ac" />
+</animation>
+
+<animation id="pipe_v_green_e">
+	<frame animation="smb3_tiles" index="ad" />
+</animation>
+
+<animation id="snowy_ground_w">
+	<frame animation="smb3_tiles" index="110" />
+</animation>
+
+<animation id="snowy_ground">
+	<frame animation="smb3_tiles" index="111" />
+</animation>
+
+<animation id="snowy_ground_e">
+	<frame animation="smb3_tiles" index="112" />
+</animation>
+
+<animation id="snowy_ledge_nw" >
+	<frame animation="smb3_tiles" index="1f6" />
+</animation>
+
+<animation id="snowy_ledge_n" >
+	<frame animation="smb3_tiles" index="1f7" />
+</animation>
+
+<animation id="snowy_ledge_ne" >
+	<frame animation="smb3_tiles" index="1f8" />
+</animation>
+
+<animation id="snowy_ledge_w" >
+	<frame animation="smb3_tiles" index="213" />
+</animation>
+
+<animation id="snowy_ledge" >
+	<frame animation="smb3_tiles" index="214" />
+</animation>
+
+<animation id="snowy_ledge_e" >
+	<frame animation="smb3_tiles" index="215" />
+</animation>
+
+<animation id="water">
+	<frame animation="smb3_tiles" index="1d2" />
+</animation>
+
+<animation id="water_surface">
+	<frame animation="smb3_tiles" index="70" time="10" />
+	<frame animation="smb3_tiles" index="71" />
+	<frame animation="smb3_tiles" index="72" />
+	<frame animation="smb3_tiles" index="73" />
+</animation>
+
+<animation id="wooden_ground_nw">
+	<frame animation="smb3_tiles" index="4" />
+</animation>
+
+<animation id="wooden_ground_n">
+	<frame animation="smb3_tiles" index="5" />
+</animation>
+
+<animation id="wooden_ground_ne">
+	<frame animation="smb3_tiles" index="6" />
+</animation>
+
+<animation id="wooden_ground_w">
+	<frame animation="smb3_tiles" index="21" />
+</animation>
+
+<animation id="wooden_ground">
+	<frame animation="smb3_tiles" index="22" />
+</animation>
+
+<animation id="wooden_ground_e">
+	<frame animation="smb3_tiles" index="23" />
+</animation>
+
+<!-- Backgrounds -->
+<background id="blocks_bg" tiling="horizontal">
+	<frame image="smb3_bg/blocks.png" />
+</background>
+
+<background id="dark_hills_bg" tiling="horizontal" time="10">
+	<frame image="smb3_bg/dark_hills_1.png" />
+	<frame image="smb3_bg/dark_hills_2.png" />
+	<frame image="smb3_bg/dark_hills_3.png" />
+	<frame index="1" />
+</background>
+
+<background id="hills_bg" tiling="horizontal">
+	<frame image="smb3_bg/hills.png" />
+</background>
+
+<background id="pipes_bg" tiling="all" time="10">
+	<frame image="smb3_bg/pipes_1.png" />
+	<frame image="smb3_bg/pipes_2.png" />
+	<frame image="smb3_bg/pipes_3.png" />
+</background>
+
+<background id="smb3_ice_forest_bg" tiling="horizontal">
+	<frame image="smb3_bg/ice_forest.png" />
+</background>
+
+<background id="smb3_underground_bg">
+	<frame image="smb3_bg/underground.png" />
+</background>
+
+<background id="smb3_ice_cave_bg" time="10">
+	<frame image="smb3_bg/ice_cave_1.png" />
+	<frame image="smb3_bg/ice_cave_2.png" />
+	<frame image="smb3_bg/ice_cave_3.png" />
+	<frame image="smb3_bg/ice_cave_4.png" />
+	<frame image="smb3_bg/ice_cave_5.png" />
+	<frame image="smb3_bg/ice_cave_6.png" />
+</background>
+
+<!-- Resource groups -->
+<!-- The default resource group that most things are loaded from -->
+<!-- Entities will use this group by default if one is not specified. -->
+<group id="default">
+	<!-- Music -->
+	<resource key="course_clear" value="course_clear" />
+	<resource key="death" value="death" />
+	<resource key="game_over" value="game_over" />
+	<resource key="map_overworld" value="map_overworld" />
+	<resource key="overworld" value="overworld" />
+	<resource key="overworld2" value="overworld2" />
+	<resource key="starman" value="starman" />
+	
+	<!-- Sounds -->
+	<resource key="1up" value="1up" />
+	<resource key="blast" value="blast" />
+	<resource key="bump" value="bump" />
+	<resource key="brick_break" value="brick_break" />
+	<resource key="coin_get" value="coin_get" />
+	<resource key="count" value="count" />
+	<resource key="hit_1" value="hit_1" />
+	<resource key="hit_2" value="hit_2" />
+	<resource key="hit_3" value="hit_3" />
+	<resource key="hit_4" value="hit_4" />
+	<resource key="hit_5" value="hit_5" />
+	<resource key="hit_6" value="hit_6" />
+	<resource key="hit_7" value="hit_7" />
+	<resource key="jump" value="jump" />
+	<resource key="kick" value="kick" />
+	<resource key="level_enter" value="level_enter" />
+	<resource key="map_move" value="map_move" />
+	<resource key="map_reveal" value="map_reveal" />
+	<resource key="powerdown" value="powerdown" />
+	<resource key="powerup" value="powerup" />
+	<resource key="reserve_item" value="reserve_item" />
+	<resource key="reserve_item_drop" value="reserve_item_drop" />
+	<resource key="spin" value="spin" />
+	<resource key="sprout" value="sprout" />
+	<resource key="stomp" value="stomp" />
+	<resource key="swim" value="swim" />
+	<resource key="throw" value="throw" />
+	
+	<!-- Fonts -->
+	<resource key="font_main" value="font_main" />
+	<resource key="font_bold" value="font_bold" />
+	
+	<!-- Animations -->
+	<resource key="brick" value="brick" />
+	<resource key="question_block" value="question_block" />
+	<resource key="block_dead" value="block_dead" />
+	<resource key="coin" value="coin" />
+	<resource key="player_small" value="mario_small" />
+	<resource key="player_small_walk" value="mario_small_walk" />
+	<resource key="player_small_run" value="mario_small_run" />
+	<resource key="player_small_sprint" value="mario_small_sprint" />
+	<resource key="player_small_jump" value="mario_small_jump" />
+	<resource key="player_small_turn" value="mario_small_turn" />
+	<resource key="player_small_carrying" value="mario_small_carrying" />
+	<resource key="player_small_carrying_walk" value="mario_small_carrying_walk" />
+	<resource key="player_small_carrying_run" value="mario_small_carrying_run" />
+	<resource key="player_small_carrying_sprint" value="mario_small_carrying_sprint" />
+	<resource key="player_small_carrying_jump" value="mario_small_carrying_jump" />
+	<resource key="player_small_kick" value="mario_small_kick" />
+	<resource key="player_small_slide" value="mario_small_slide" />
+	<resource key="player_small_swim" value="mario_small_swim" />
+	<resource key="player_small_swim_move" value="mario_small_swim_move" />
+	<resource key="player_small_sprint_jump" value="mario_small_sprint_jump" />
+	<resource key="player_small_climb" value="mario_small_climb" />
+	<resource key="player_small_climb_move" value="mario_small_climb_move" />
+	<resource key="player_small_front" value="mario_small_front" />
+	<resource key="player_super" value="mario_super" />
+	<resource key="player_super_walk" value="mario_super_walk" />
+	<resource key="player_super_run" value="mario_super_run" />
+	<resource key="player_super_sprint" value="mario_super_sprint" />
+	<resource key="player_super_jump" value="mario_super_jump" />
+	<resource key="player_super_fall" value="mario_super_fall" />
+	<resource key="player_super_turn" value="mario_super_turn" />
+	<resource key="player_super_duck" value="mario_super_duck" />
+	<resource key="player_super_carrying" value="mario_super_carrying" />
+	<resource key="player_super_carrying_walk" value="mario_super_carrying_walk" />
+	<resource key="player_super_carrying_run" value="mario_super_carrying_run" />
+	<resource key="player_super_carrying_sprint" value="mario_super_carrying_sprint" />
+	<resource key="player_super_carrying_jump" value="mario_super_carrying_jump" />
+	<resource key="player_super_kick" value="mario_super_kick" />
+	<resource key="player_super_slide" value="mario_super_slide" />
+	<resource key="player_super_swim" value="mario_super_swim" />
+	<resource key="player_super_swim_move" value="mario_super_swim_move" />
+	<resource key="player_super_sprint_jump" value="mario_super_sprint_jump" />
+	<resource key="player_super_climb" value="mario_super_climb" />
+	<resource key="player_super_climb_move" value="mario_super_climb_move" />
+	<resource key="player_super_front" value="mario_super_front" />
+	<resource key="player_fire" value="mario_fire" />
+	<resource key="player_fire_walk" value="mario_fire_walk" />
+	<resource key="player_fire_run" value="mario_fire_run" />
+	<resource key="player_fire_sprint" value="mario_fire_sprint" />
+	<resource key="player_fire_jump" value="mario_fire_jump" />
+	<resource key="player_fire_fall" value="mario_fire_fall" />
+	<resource key="player_fire_turn" value="mario_fire_turn" />
+	<resource key="player_fire_throw" value="mario_fire_throw" />
+	<resource key="player_fire_duck" value="mario_fire_duck" />
+	<resource key="player_fire_carrying" value="mario_fire_carrying" />
+	<resource key="player_fire_carrying_walk" value="mario_fire_carrying_walk" />
+	<resource key="player_fire_carrying_run" value="mario_fire_carrying_run" />
+	<resource key="player_fire_carrying_sprint" value="mario_fire_carrying_sprint" />
+	<resource key="player_fire_carrying_jump" value="mario_fire_carrying_jump" />
+	<resource key="player_fire_kick" value="mario_fire_kick" />
+	<resource key="player_fire_slide" value="mario_fire_slide" />
+	<resource key="player_fire_swim" value="mario_fire_swim" />
+	<resource key="player_fire_swim_move" value="mario_fire_swim_move" />
+	<resource key="player_fire_sprint_jump" value="mario_fire_sprint_jump" />
+	<resource key="player_fire_climb" value="mario_fire_climb" />
+	<resource key="player_fire_climb_move" value="mario_fire_climb_move" />
+	<resource key="player_fire_front" value="mario_fire_front" />
+	<resource key="player_tail" value="mario_tail" />
+	<resource key="player_tail_walk" value="mario_tail_walk" />
+	<resource key="player_tail_run" value="mario_tail_run" />
+	<resource key="player_tail_sprint" value="mario_tail_sprint" />
+	<resource key="player_tail_jump" value="mario_tail_jump" />
+	<resource key="player_tail_fall" value="mario_tail_fall" />
+	<resource key="player_tail_turn" value="mario_tail_turn" />
+	<resource key="player_tail_duck" value="mario_tail_duck" />
+	<resource key="player_tail_carrying" value="mario_tail_carrying" />
+	<resource key="player_tail_carrying_walk" value="mario_tail_carrying_walk" />
+	<resource key="player_tail_carrying_run" value="mario_tail_carrying_run" />
+	<resource key="player_tail_carrying_sprint" value="mario_tail_carrying_sprint" />
+	<resource key="player_tail_carrying_jump" value="mario_tail_carrying_jump" />
+	<resource key="player_tail_kick" value="mario_tail_kick" />
+	<resource key="player_tail_slide" value="mario_tail_slide" />
+	<resource key="player_tail_swim" value="mario_tail_swim" />
+	<resource key="player_tail_swim_move" value="mario_tail_swim_move" />
+	<resource key="player_tail_sprint_jump" value="mario_tail_sprint_jump" />
+	<resource key="player_tail_climb" value="mario_tail_climb" />
+	<resource key="player_tail_climb_move" value="mario_tail_climb_move" />
+	<resource key="player_tail_front" value="mario_tail_front" />
+	<resource key="player_tail_flight" value="mario_tail_flight" />
+	<resource key="player_tail_descent" value="mario_tail_descent" />
+	<resource key="player_tail_spin" value="mario_tail_spin" />
+	<resource key="player_dead" value="mario_dead" />
+	<resource key="goomba" value="goomba" />
+	<resource key="goomba_dead" value="goomba_dead" />
+	<resource key="koopa" value="koopa" />
+	<resource key="shell" value="shell" />
+	<resource key="shell_spinning" value="shell_spinning" />
+	<resource key="plant_vertical" value="smb3_plant_vertical" />
+	<resource key="plant_horizontal" value="smb3_plant_horizontal" />
+	<resource key="blaster" value="smb3_bill_blaster" />
+	<resource key="blaster_short" value="smb3_bill_blaster_short" />
+	<resource key="bullet" value="smb3_bullet_bill" />
+	<resource key="beetle" value="smb3_buzzy_beetle" />
+	<resource key="beetle_shell" value="smb3_buzzy_beetle_shell" />
+	<resource key="beetle_shell_spinning" value="smb3_buzzy_beetle_shell_spinning" />
+	<resource key="spiny" value="smb3_spiny" />
+	<resource key="lakitu" value="smb3_lakitu" />
+	<resource key="lakitu_ducking" value="smb3_lakitu_ducking" />
+	<resource key="lakitu_throwing" value="smb3_lakitu_throwing" />
+	<resource key="spiny_egg" value="smb3_spiny_egg" />
+	<resource key="paratroopa" value="smb3_paratroopa" />
+	<resource key="hammer_bro" value="smb3_hammer_bro" />
+	<resource key="hammer_bro_throw" value="smb3_hammer_bro_throw" />
+	<resource key="hammer" value="smb3_hammer" />
+	<resource key="mushroom" value="mushroom" />
+	<resource key="flower" value="flower" />
+	<resource key="fireball" value="fireball" />
+	<resource key="star" value="star" />
+	<resource key="leaf" value="leaf" />
+	<resource key="bush" value="bush" />
+	<resource key="ladder" value="smb3_vine" />
+	<resource key="growing_ladder" value="smb3_plant_head" />
+	<resource key="brick_particle" value="brick_particle" />
+	<resource key="coin_particle" value="coin_particle" />
+	<resource key="coin_explosion" value="coin_explosion" />
+	<resource key="coin_sparkle" value="coin_sparkle" />
+	<resource key="fireball_smoke" value="fireball_smoke" />
+	<resource key="hit" value="hit" />
+	<resource key="slide_smoke" value="slide_smoke" />
+	<resource key="level_end_block" value="level_end_block" />
+	<resource key="mario_indicator" value="mario_indicator" />
+	<resource key="times" value ="times" />
+	<resource key="time_indicator" value="time_indicator" />
+	<resource key="coin_indicator" value="coin_indicator" />
+	<resource key="p_meter_bar_empty" value="p_meter_bar_empty" />
+	<resource key="p_meter_bar_full" value="p_meter_bar_full" />
+	<resource key="p_meter_empty" value="p_meter_empty" />
+	<resource key="p_meter_full" value="p_meter_full" />
+	<resource key="reserve_item_box" value="reserve_item_box" />
+	<resource key="score_100" value="score_100" />
+	<resource key="score_200" value="score_200" />
+	<resource key="score_400" value="score_400" />
+	<resource key="score_800" value="score_800" />
+	<resource key="score_1000" value="score_1000" />
+	<resource key="score_2000" value="score_2000" />
+	<resource key="score_4000" value="score_4000" />
+	<resource key="score_8000" value="score_8000" />
+	<resource key="score_1up" value="score_1up" />
+	<resource key="map_mario" value="map_mario" />
+	<resource key="map_mario_climb" value="map_mario_climb" />
+	<resource key="map_mario_swim_down" value="map_mario_swim_down" />
+	<resource key="map_mario_swim_side" value="map_mario_swim_side" />
+	<resource key="map_mario_swim_up" value="map_mario_swim_up" />
+	<resource key="map_mario_walk_down" value="map_mario_walk_down" />
+	<resource key="map_mario_walk_side" value="map_mario_walk_side" />
+	<resource key="map_mario_walk_up" value="map_mario_walk_up" />
+	<resource key="mario_start_text" value="mario_start_text" />
+	<resource key="luigi_start_text" value="luigi_start_text" />
+	<resource key="game_over_text" value="game_over_text" />
+	<resource key="time_up_text" value="time_up_text" />
+	<resource key="level_single_exit" value="level_single_exit" />
+	<resource key="level_multiple_exits" value="level_multiple_exits" />
+	<resource key="map_tiles" value="map_tiles" />
+	
+	<!-- Backgrounds -->
+	<resource key="blocks_bg" value="blocks_bg" />
+	<resource key="dark_hills_bg" value="dark_hills_bg" />
+	<resource key="hills_bg" value="hills_bg" />
+	<resource key="pipes_bg" value="pipes_bg" />
+</group>
+
+<!-- Groups representing multi-tile level objects -->
+<group id="grass_tileset">
+	<resource key="tile_nw" animation="smb3_tiles" index="12" />
+	<resource key="tile_n" animation="smb3_tiles" index="13" />
+	<resource key="tile_ne" animation="smb3_tiles" index="14" />
+	<resource key="tile_w" animation="smb3_tiles" index="2f" />
+	<resource key="tile" animation="smb3_tiles" index="30" />
+	<resource key="tile_e" animation="smb3_tiles" index="31" />
+	<resource key="tile_sw" animation="smb3_tiles" index="4b" />
+	<resource key="tile_s" animation="smb3_tiles" index="4c" />
+	<resource key="tile_se" animation="smb3_tiles" index="4d" />
+	<resource key="tile_corner_nw" animation="smb3_tiles" index="11" />
+	<resource key="tile_corner_ne" animation="smb3_tiles" index="15" />
+	<resource key="tile_slope_up" animation="smb3_tiles" index="10" />
+	<resource key="tile_slope_down" animation="smb3_tiles" index="16" />
+	<resource key="tile_slope_up_left" animation="smb3_tiles" index="2d" />
+	<resource key="tile_slope_up_right" animation="smb3_tiles" index="2e" />
+	<resource key="tile_slope_down_left" animation="smb3_tiles" index="32" />
+	<resource key="tile_slope_down_right" animation="smb3_tiles" index="33" />
+</group>
+
+<group id="dead_grass_tileset">
+	<resource key="tile_nw" animation="smb3_tiles" index="9d" />
+	<resource key="tile_n" animation="smb3_tiles" index="9e" />
+	<resource key="tile_ne" animation="smb3_tiles" index="9f" />
+	<resource key="tile_w" animation="smb3_tiles" index="ba" />
+	<resource key="tile" animation="smb3_tiles" index="bb" />
+	<resource key="tile_e" animation="smb3_tiles" index="bc" />
+	<resource key="tile_corner_nw" animation="smb3_tiles" index="9c" />
+	<resource key="tile_corner_ne" animation="smb3_tiles" index="a0" />
+	<resource key="tile_slope_up" animation="smb3_tiles" index="9b" />
+	<resource key="tile_slope_down" animation="smb3_tiles" index="a1" />
+	<resource key="tile_slope_up_left" animation="smb3_tiles" index="b8" />
+	<resource key="tile_slope_up_right" animation="smb3_tiles" index="b9" />
+	<resource key="tile_slope_down_left" animation="smb3_tiles" index="bd" />
+	<resource key="tile_slope_down_right" animation="smb3_tiles" index="be" />
+</group>
+
+<group id="cave_tileset">
+	<resource key="tile_nw" animation="smb3_tiles" index="254" />
+	<resource key="tile_n" animation="smb3_tiles" index="255" />
+	<resource key="tile_ne" animation="smb3_tiles" index="256" />
+	<resource key="tile_w" animation="smb3_tiles" index="266" />
+	<resource key="tile" animation="smb3_tiles" index="267" />
+	<resource key="tile_e" animation="smb3_tiles" index="268" />
+	<resource key="tile_sw" animation="smb3_tiles" index="281" />
+	<resource key="tile_s" animation="smb3_tiles" index="282" />
+	<resource key="tile_se" animation="smb3_tiles" index="283" />
+	<resource key="tile_corner_nw" animation="smb3_tiles" index="253" />
+	<resource key="tile_corner_ne" animation="smb3_tiles" index="257" />
+	<resource key="tile_slope_up" animation="smb3_tiles" index="252" />
+	<resource key="tile_slope_down" animation="smb3_tiles" index="258" />
+	<resource key="tile_slope_up_left" animation="smb3_tiles" index="263" />
+	<resource key="tile_slope_up_right" animation="smb3_tiles" index="264" />
+	<resource key="tile_slope_down_left" animation="smb3_tiles" index="26a" />
+	<resource key="tile_slope_down_right" animation="smb3_tiles" index="26b" />
+</group>
+
+<group id="ice_cave_tileset">
+	<resource key="tile_nw" animation="smb3_tiles" index="25b" />
+	<resource key="tile_n" animation="smb3_tiles" index="25c" />
+	<resource key="tile_ne" animation="smb3_tiles" index="25d" />
+	<resource key="tile_w" animation="smb3_tiles" index="26f" />
+	<resource key="tile" animation="smb3_tiles" index="270" />
+	<resource key="tile_e" animation="smb3_tiles" index="271" />
+	<resource key="tile_sw" animation="smb3_tiles" index="28a" />
+	<resource key="tile_s" animation="smb3_tiles" index="28b" />
+	<resource key="tile_se" animation="smb3_tiles" index="28c" />
+	<resource key="tile_corner_nw" animation="smb3_tiles" index="25a" />
+	<resource key="tile_corner_ne" animation="smb3_tiles" index="25e" />
+	<resource key="tile_slope_up" animation="smb3_tiles" index="259" />
+	<resource key="tile_slope_down" animation="smb3_tiles" index="25f" />
+	<resource key="tile_slope_up_left" animation="smb3_tiles" index="26c" />
+	<resource key="tile_slope_up_right" animation="smb3_tiles" index="26d" />
+	<resource key="tile_slope_down_left" animation="smb3_tiles" index="273" />
+	<resource key="tile_slope_down_right" animation="smb3_tiles" index="274" />
+</group>
+
+<group id="ice_block_tileset">
+	<resource key="tile" value="ice_block" />
+</group>
+
+<group id="metal_box_blue_tileset">
+	<resource key="tile_nw" value="metal_box_blue_nw" />
+	<resource key="tile_n" value="metal_box_blue_n" />
+	<resource key="tile_ne" value="metal_box_blue_ne" />
+	<resource key="tile_w" value="metal_box_blue_w" />
+	<resource key="tile" value="metal_box_blue" />
+	<resource key="tile_e" value="metal_box_blue_e" />
+	<resource key="tile_sw" value="metal_box_blue_sw" />
+	<resource key="tile_s" value="metal_box_blue_s" />
+	<resource key="tile_se" value="metal_box_blue_se" />
+</group>
+
+<group id="metal_box_green_tileset">
+	<resource key="tile_nw" value="metal_box_green_nw" />
+	<resource key="tile_n" value="metal_box_green_n" />
+	<resource key="tile_ne" value="metal_box_green_ne" />
+	<resource key="tile_w" value="metal_box_green_w" />
+	<resource key="tile" value="metal_box_green" />
+	<resource key="tile_e" value="metal_box_green_e" />
+	<resource key="tile_sw" value="metal_box_green_sw" />
+	<resource key="tile_s" value="metal_box_green_s" />
+	<resource key="tile_se" value="metal_box_green_se" />
+</group>
+
+<group id="metal_box_red_tileset">
+	<resource key="tile_nw" value="metal_box_red_nw" />
+	<resource key="tile_n" value="metal_box_red_n" />
+	<resource key="tile_ne" value="metal_box_red_ne" />
+	<resource key="tile_w" value="metal_box_red_w" />
+	<resource key="tile" value="metal_box_red" />
+	<resource key="tile_e" value="metal_box_red_e" />
+	<resource key="tile_sw" value="metal_box_red_sw" />
+	<resource key="tile_s" value="metal_box_red_s" />
+	<resource key="tile_se" value="metal_box_red_se" />
+</group>
+
+<group id="metal_box_white_tileset">
+	<resource key="tile_nw" value="metal_box_white_nw" />
+	<resource key="tile_n" value="metal_box_white_n" />
+	<resource key="tile_ne" value="metal_box_white_ne" />
+	<resource key="tile_w" value="metal_box_white_w" />
+	<resource key="tile" value="metal_box_white" />
+	<resource key="tile_e" value="metal_box_white_e" />
+	<resource key="tile_sw" value="metal_box_white_sw" />
+	<resource key="tile_s" value="metal_box_white_s" />
+	<resource key="tile_se" value="metal_box_white_se" />
+</group>
+
+<group id="pipe_down_green_tileset">
+	<resource key="tile_sw" value="pipe_v_green_sw" />
+	<resource key="tile_se" value="pipe_v_green_se" />
+	<resource key="tile_w" value="pipe_v_green_w" />
+	<resource key="tile_e" value="pipe_v_green_e" />
+</group>
+
+<group id="pipe_left_green_tileset">
+	<resource key="tile_nw" value="pipe_h_green_nw" />
+	<resource key="tile_sw" value="pipe_h_green_sw" />
+	<resource key="tile_n" value="pipe_h_green_n" />
+	<resource key="tile_s" value="pipe_h_green_s" />
+</group>
+
+<group id="pipe_right_green_tileset">
+	<resource key="tile_ne" value="pipe_h_green_ne" />
+	<resource key="tile_se" value="pipe_h_green_se" />
+	<resource key="tile_n" value="pipe_h_green_n" />
+	<resource key="tile_s" value="pipe_h_green_s" />
+</group>
+
+<group id="pipe_up_green_tileset">
+	<resource key="tile_nw" value="pipe_v_green_nw" />
+	<resource key="tile_ne" value="pipe_v_green_ne" />
+	<resource key="tile_w" value="pipe_v_green_w" />
+	<resource key="tile_e" value="pipe_v_green_e" />
+</group>
+
+<group id="snowy_ground_tileset">
+	<resource key="tile_w" value="snowy_ground_w" />
+	<resource key="tile" value="snowy_ground" />
+	<resource key="tile_e" value="snowy_ground_e" />
+</group>
+
+<group id="snowy_ledge_tileset">
+	<resource key="tile_nw" value="snowy_ledge_nw" />
+	<resource key="tile_n" value="snowy_ledge_n" />
+	<resource key="tile_ne" value="snowy_ledge_ne" />
+	<resource key="tile_w" value="snowy_ledge_w" />
+	<resource key="tile" value="snowy_ledge" />
+	<resource key="tile_e" value="snowy_ledge_e" />
+</group>
+
+<group id="water_tileset">
+	<resource key="tile_n" value="water_surface" />
+	<resource key="tile" animation="smb3_tiles" index="1d2" />
+</group>
+
+<group id="wood_block_tileset">
+	<resource key="tile" value="wood_block" />
+</group>
+
+<group id="wooden_ground_tileset">
+	<resource key="tile_nw" value="wooden_ground_nw" />
+	<resource key="tile_n" value="wooden_ground_n" />
+	<resource key="tile_ne" value="wooden_ground_ne" />
+	<resource key="tile_w" value="wooden_ground_w" />
+	<resource key="tile" value="wooden_ground" />
+	<resource key="tile_e" value="wooden_ground_e" />
+</group>
+
+<!-- Themes for generating levels -->
+<theme id="default_theme"> <!-- All themes inherit from this automatically -->
+	<entity id="pipe_down" group="pipe_down_green_tileset" />
+	<entity id="pipe_left" group="pipe_left_green_tileset" />
+	<entity id="pipe_right" group="pipe_right_green_tileset" />
+	<entity id="pipe_up" group="pipe_up_green_tileset" />
+	<entity id="water" group="water_tileset" />
+</theme>
+
+<theme id="smb3_blocks_theme" parent="default_theme">
+	<entity id="block" group="wood_block_tileset" />
+	<entity id="ground" group="wooden_ground_tileset" />
+	<entity id="ledge" group="metal_box_blue_tileset" />
+	<entity id="ledge" group="metal_box_green_tileset" />
+	<entity id="ledge" group="metal_box_red_tileset" />
+	<entity id="ledge" group="metal_box_white_tileset" />
+	<entity id="water" group="water_tileset" />
+	<resource id="blocks_bg" />
+	<resource id="overworld" />
+</theme>
+
+<theme id="smb3_grass_theme">
+	<entity id="ground" group="grass_tileset" />
+	<entity id="slope_down" group="grass_tileset" />
+	<entity id="slope_up" group="grass_tileset" />
+	<resource id="hills_bg" />
+	<resource id="overworld2" />
+</theme>
+
+<theme id="smb3_dead_grass_theme">
+	<entity id="ground" group="dead_grass_tileset" />
+	<entity id="slope_down" group="dead_grass_tileset" />
+	<entity id="slope_up" group="dead_grass_tileset" />
+	<resource id="dark_hills_bg" />
+	<resource id="overworld2" />
+</theme>
+
+<theme id="smb3_snow_theme">
+	<entity id="block" group="ice_block_tileset" />
+	<entity id="ground" group="snowy_ground_tileset" />
+	<entity id="ledge" group="snowy_ledge_tileset" />
+	<entity id="water" group="water_tileset" />
+	<resource id="smb3_ice_forest_bg" />
+	<resource id="overworld" />
+</theme>
+
+<theme id="smb3_cave_theme">
+	<entity id="ground" group="cave_tileset" />
+	<entity id="slope_down" group="cave_tileset" />
+	<entity id="slope_up" group="cave_tileset" />
+	<resource id="smb3_underground_bg" />
+	<resource id="overworld" />
+</theme>
+
+<theme id="smb3_ice_cave_theme">
+	<entity id="ground" group="ice_cave_tileset" />
+	<entity id="slope_down" group="ice_cave_tileset" />
+	<entity id="slope_up" group="ice_cave_tileset" />
+	<resource id="smb3_ice_cave_bg" />
+	<resource id="overworld" />
+</theme>
+
+</resources>

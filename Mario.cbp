@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Mario" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Mario" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Mario" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDL2main" />
+			<Add library="SDL2" />
+			<Add library="SDL2_mixer" />
+			<Add library="opengl32" />
+			<Add library="DevIL" />
+			<Add library="ILU" />
+		</Linker>
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="source/Animation.cpp" />
+		<Unit filename="source/Animation.hpp" />
+		<Unit filename="source/Background.cpp" />
+		<Unit filename="source/Background.hpp" />
+		<Unit filename="source/Beetle.cpp" />
+		<Unit filename="source/Beetle.hpp" />
+		<Unit filename="source/BitmapFont.cpp" />
+		<Unit filename="source/BitmapFont.hpp" />
+		<Unit filename="source/Blaster.cpp" />
+		<Unit filename="source/Blaster.hpp" />
+		<Unit filename="source/Block.cpp" />
+		<Unit filename="source/Block.hpp" />
+		<Unit filename="source/Bullet.cpp" />
+		<Unit filename="source/Bullet.hpp" />
+		<Unit filename="source/Camera.cpp" />
+		<Unit filename="source/Camera.hpp" />
+		<Unit filename="source/Coin.cpp" />
+		<Unit filename="source/Coin.hpp" />
+		<Unit filename="source/Color.cpp" />
+		<Unit filename="source/Color.hpp" />
+		<Unit filename="source/Enemy.cpp" />
+		<Unit filename="source/Enemy.hpp" />
+		<Unit filename="source/Entity.cpp" />
+		<Unit filename="source/Entity.hpp" />
+		<Unit filename="source/EntityTypes.cpp" />
+		<Unit filename="source/EntityTypes.hpp" />
+		<Unit filename="source/Enums.cpp" />
+		<Unit filename="source/Enums.hpp" />
+		<Unit filename="source/Episode.cpp" />
+		<Unit filename="source/Episode.hpp" />
+		<Unit filename="source/Exception.hpp" />
+		<Unit filename="source/Fireball.cpp" />
+		<Unit filename="source/Fireball.hpp" />
+		<Unit filename="source/Flower.cpp" />
+		<Unit filename="source/Flower.hpp" />
+		<Unit filename="source/Font.cpp" />
+		<Unit filename="source/Font.hpp" />
+		<Unit filename="source/FpsManager.cpp" />
+		<Unit filename="source/FpsManager.hpp" />
+		<Unit filename="source/Game.cpp" />
+		<Unit filename="source/Game.hpp" />
+		<Unit filename="source/GameSession.cpp" />
+		<Unit filename="source/GameSession.hpp" />
+		<Unit filename="source/GameState.cpp" />
+		<Unit filename="source/GameState.hpp" />
+		<Unit filename="source/Globals.cpp" />
+		<Unit filename="source/Globals.hpp" />
+		<Unit filename="source/Goomba.cpp" />
+		<Unit filename="source/Goomba.hpp" />
+		<Unit filename="source/GrowingLadder.cpp" />
+		<Unit filename="source/GrowingLadder.hpp" />
+		<Unit filename="source/HammerBro.cpp" />
+		<Unit filename="source/HammerBro.hpp" />
+		<Unit filename="source/Image.cpp" />
+		<Unit filename="source/Image.hpp" />
+		<Unit filename="source/InfinityState.cpp" />
+		<Unit filename="source/InfinityState.hpp" />
+		<Unit filename="source/IniFile.cpp" />
+		<Unit filename="source/IniFile.hpp" />
+		<Unit filename="source/InputManager.cpp" />
+		<Unit filename="source/InputManager.hpp" />
+		<Unit filename="source/Item.cpp" />
+		<Unit filename="source/Item.hpp" />
+		<Unit filename="source/Koopa.cpp" />
+		<Unit filename="source/Koopa.hpp" />
+		<Unit filename="source/Ladder.cpp" />
+		<Unit filename="source/Ladder.hpp" />
+		<Unit filename="source/Lakitu.cpp" />
+		<Unit filename="source/Lakitu.hpp" />
+		<Unit filename="source/Leaf.cpp" />
+		<Unit filename="source/Leaf.hpp" />
+		<Unit filename="source/Level.cpp" />
+		<Unit filename="source/Level.hpp" />
+		<Unit filename="source/LevelEnd.cpp" />
+		<Unit filename="source/LevelEnd.hpp" />
+		<Unit filename="source/LevelGenerator.hpp" />
+		<Unit filename="source/LevelGenerators/HillyLevelGenerator.cpp" />
+		<Unit filename="source/LevelGenerators/HillyLevelGenerator.hpp" />
+		<Unit filename="source/LevelGenerators/SimpleLevelGenerator.cpp" />
+		<Unit filename="source/LevelGenerators/SimpleLevelGenerator.hpp" />
+		<Unit filename="source/LevelGenerators/SmbLevelLoader.cpp" />
+		<Unit filename="source/LevelGenerators/SmbLevelLoader.hpp" />
+		<Unit filename="source/LevelGenerators/TestLevelGenerator.cpp" />
+		<Unit filename="source/LevelGenerators/TestLevelGenerator.hpp" />
+		<Unit filename="source/LevelTheme.cpp" />
+		<Unit filename="source/LevelTheme.hpp" />
+		<Unit filename="source/LoadingState.cpp" />
+		<Unit filename="source/LoadingState.hpp" />
+		<Unit filename="source/Location.cpp" />
+		<Unit filename="source/Location.hpp" />
+		<Unit filename="source/Logger.cpp" />
+		<Unit filename="source/Logger.hpp" />
+		<Unit filename="source/Main.cpp" />
+		<Unit filename="source/MainState.cpp" />
+		<Unit filename="source/MainState.hpp" />
+		<Unit filename="source/Map.cpp" />
+		<Unit filename="source/Map.hpp" />
+		<Unit filename="source/MapState.cpp" />
+		<Unit filename="source/MapState.hpp" />
+		<Unit filename="source/Math.cpp" />
+		<Unit filename="source/Math.hpp" />
+		<Unit filename="source/Mushroom.cpp" />
+		<Unit filename="source/Mushroom.hpp" />
+		<Unit filename="source/Music.cpp" />
+		<Unit filename="source/Music.hpp" />
+		<Unit filename="source/NoiseSource.hpp" />
+		<Unit filename="source/Paratroopa.cpp" />
+		<Unit filename="source/Paratroopa.hpp" />
+		<Unit filename="source/Particle.cpp" />
+		<Unit filename="source/Particle.hpp" />
+		<Unit filename="source/PerlinNoiseSource.hpp" />
+		<Unit filename="source/Pipe.cpp" />
+		<Unit filename="source/Pipe.hpp" />
+		<Unit filename="source/Plant.cpp" />
+		<Unit filename="source/Plant.hpp" />
+		<Unit filename="source/Player.cpp" />
+		<Unit filename="source/Player.hpp" />
+		<Unit filename="source/Random.cpp" />
+		<Unit filename="source/Random.hpp" />
+		<Unit filename="source/Rendering.cpp" />
+		<Unit filename="source/Rendering.hpp" />
+		<Unit filename="source/ReserveItem.cpp" />
+		<Unit filename="source/ReserveItem.hpp" />
+		<Unit filename="source/ResourceManager.cpp" />
+		<Unit filename="source/ResourceManager.hpp" />
+		<Unit filename="source/Settings.cpp" />
+		<Unit filename="source/Settings.hpp" />
+		<Unit filename="source/Shell.cpp" />
+		<Unit filename="source/Shell.hpp" />
+		<Unit filename="source/Singleton.hpp" />
+		<Unit filename="source/Sound.cpp" />
+		<Unit filename="source/Sound.hpp" />
+		<Unit filename="source/Spiny.cpp" />
+		<Unit filename="source/Spiny.hpp" />
+		<Unit filename="source/Sprite.cpp" />
+		<Unit filename="source/Sprite.hpp" />
+		<Unit filename="source/Star.cpp" />
+		<Unit filename="source/Star.hpp" />
+		<Unit filename="source/StringSwitch.cpp" />
+		<Unit filename="source/StringSwitch.hpp" />
+		<Unit filename="source/Text.cpp" />
+		<Unit filename="source/Text.hpp" />
+		<Unit filename="source/TextParticle.cpp" />
+		<Unit filename="source/TextParticle.hpp" />
+		<Unit filename="source/Texture.cpp" />
+		<Unit filename="source/Texture.hpp" />
+		<Unit filename="source/Tile.cpp" />
+		<Unit filename="source/Tile.hpp" />
+		<Unit filename="source/TransitionState.cpp" />
+		<Unit filename="source/TransitionState.hpp" />
+		<Unit filename="source/Types.hpp" />
+		<Unit filename="source/Vector2.hpp" />
+		<Unit filename="source/Vector3.hpp" />
+		<Unit filename="source/World.cpp" />
+		<Unit filename="source/World.hpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

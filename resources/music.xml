@@ -1,0 +1,12 @@
+<?xml version=1.0?>
+<resources>
+
+<music id="course_clear" file="smb3_course_clear.mp3" />
+<music id="death" file="smb3_death.mp3" />
+<music id="game_over" file="smb3_game_over.mp3" />
+<music id="map_overworld" file="smw_map_overworld.mp3" />
+<music id="overworld" file="smb3_overworld.mp3" />
+<music id="overworld2" file="smb3_overworld2.mp3" />
+<music id="starman" file="smb3_starman.mp3" />
+
+</resources>

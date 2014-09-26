@@ -17,7 +17,7 @@ You will also need the following libraries:
 Resources
 ---------
 These are needed to run the game in it's current form.
-I've shared them publicly in my Dropbox: https://www.dropbox.com/sh/l6wtp2es6y67s26/AAAqBaica5-9Ut9Rr80J5sTAa?dl=0
+I've shared them publicly in my Dropbox: http://bit.ly/1myJJk0
 Copy everything from there to the /resources directory.
 
 Documentation

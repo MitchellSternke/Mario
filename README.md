@@ -13,6 +13,7 @@ You will also need the following libraries:
 - opengl
 - DevIL
 - boost
+- rapidxml
 
 Resources
 ---------

@@ -397,7 +397,8 @@ void MainState::render()
 			times->renderFrame(frame);
 			glTranslatef(frame.width * UNIT_SIZE, 0.0f, 0.0f);
 
-			font->renderText(" 50");
+			sprintf(tempString, " 50 = %d", remainingTime * 50);
+			font->renderText(tempString);
 		}
 	}
 

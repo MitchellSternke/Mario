@@ -27,6 +27,7 @@
 	<char id="a" x="0" y="25" number="16" />
 	<char id="q" x="0" y="33" number="10" />
 	<char id="0" x="0" y="41" number="10" />
+	<char id="=" x="80" y="41" />
 </font>
 
 <!-- Animations -->

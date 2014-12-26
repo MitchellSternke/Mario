@@ -697,6 +697,7 @@ void Player::onButtonToggle( InputButton button, bool pressed )
 			{
 				dropReserveItem();
 			}
+			break;
 
 		default:
 			break;

@@ -53,7 +53,7 @@ extern void* window; /**< Handle to the SDL2 window. */
 // Global Game Constants
 //=====================================================================
 
-#define GAME_TITLE "Platformer"
+#define GAME_TITLE "Mario"
 
 static const double GAME_FPS = 60.0;          /**< Frames per second that the Game runs at. */
 constexpr double GAME_DELTA = 1.0 / GAME_FPS; /**< Delta (change in time) between each frame. */

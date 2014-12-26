@@ -29,6 +29,9 @@
 #define VIEW_WIDTH (SETTINGS.screenWidth / (SETTINGS.scale * (double)UNIT_SIZE))
 #define VIEW_HEIGHT (SETTINGS.screenHeight / (SETTINGS.scale * (double)UNIT_SIZE))
 
+static const double DEAD_PLAYER_INITIAL_VELOCITY = 16.0; /**< The initial y velocity of the player upon death. */
+static const double DEAD_PLAYER_GRAVITY = -32.0;         /**< The gravity of the player when dead. */
+
 static const int    MINIMUM_SCORE_PARTICLE_POINTS = 100; /**< The minimum points required when scoring for a text particle to appear. */
 
 static const double TEXT_PARTICLE_SPEED = 5.0;    /**< The speed of a text particle. */
@@ -867,6 +870,9 @@ void Player::onPostUpdate()
 	// Check if we are in a different phase and process accordingly
 	switch( phase )
 	{
+	case PHASE_DEAD:
+		// Do nothing...
+		break;
 	case PHASE_TRANSFORM:
 		phaseTransform();
 		break;
@@ -949,9 +955,15 @@ void Player::onPostUpdate()
 		pMeter = 0;
 	}
 
+	// Check if we died this frame and update accordingly
+	if( dead && phase != PHASE_DEAD )
+	{
+		setPhase(PHASE_DEAD);
+	}
+
 	// Determine the animation to use
 	double speed = std::fabs(getXVelocity());
-	if( phase == PHASE_WARP_ENTER || phase == PHASE_WARP_EXIT )
+	if( phase == PHASE_DEAD || phase == PHASE_WARP_ENTER || phase == PHASE_WARP_EXIT )
 	{
 		; // No change
 	}
@@ -1777,6 +1789,22 @@ void Player::setPhase( Phase phase )
 		setAnimationPaused(false);
 		break;
 
+	case PHASE_DEAD:
+		if( getTop() > 0.0 )
+		{
+			setAnimation( "player_dead" );
+		}
+		else
+		{
+			setAnimation(nullptr);
+		}
+		setCollisionsEnabled(false);
+		setXVelocity(0.0);
+		setXAcceleration(0.0);
+		setYVelocity(DEAD_PLAYER_INITIAL_VELOCITY);
+		setYAcceleration(DEAD_PLAYER_GRAVITY);
+		break;
+
 	case PHASE_TRANSFORM:
 		getWorld().setTimeEnabled(false);
 		setMotionEnabled(false);
@@ -1932,7 +1960,7 @@ void Player::scorePoints( int points, double x, double y )
 {
 	scorePointsWithoutEffect(points);
 
-	if( points < MINIMUM_SCORE_PARTICLE_POINTS || isDead() )
+	if( points < MINIMUM_SCORE_PARTICLE_POINTS )
 	{
 		return;
 	}

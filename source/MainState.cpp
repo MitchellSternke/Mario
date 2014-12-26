@@ -25,24 +25,8 @@
 #include "Tile.hpp"
 #include "World.hpp"
 
-static const double DEAD_PLAYER_INITIAL_VELOCITY = 16.0;
-static const double DEAD_PLAYER_GRAVITY = -32.0;
-
 #define VIEW_WIDTH (SETTINGS.screenWidth / (SETTINGS.scale * (double)UNIT_SIZE))
 #define VIEW_HEIGHT (SETTINGS.screenHeight / (SETTINGS.scale * (double)UNIT_SIZE))
-
-class DeadPlayer : public Particle
-{
-public:
-	DeadPlayer() :
-		Particle( GET_ANIMATION("player_dead") )
-	{
-		setDeathBoundaryEnabled(false);
-		setGravityEnabled(false);
-		setYVelocity(DEAD_PLAYER_INITIAL_VELOCITY);
-		setYAcceleration(DEAD_PLAYER_GRAVITY);
-	}
-};
 
 MainState::MainState(int level) :
 	GameState(true),
@@ -484,18 +468,8 @@ void MainState::update()
 	if( player->isDead() && !playerDeathHandled )
 	{
 		playerDeathHandled = true;
-		world->removeSprite(player);
 		PLAY_MUSIC("death", false);
 		world->freezeTime();
-
-		if( player->getBottom() >= 0.0 )
-		{
-			deadPlayer = new DeadPlayer();
-			deadPlayer->setCenterX(player->getCenterX());
-			deadPlayer->setBottom(player->getBottom());
-			deadPlayer->setCollisionsEnabled(false);
-			world->addSprite(deadPlayer);
-		}
 
 		endTimer = 240; ///@todo constant
 	}
@@ -504,6 +478,7 @@ void MainState::update()
 		if( --endTimer == 0 )
 		{
 			// Head back to the map now...
+			world->removeSprite(player);
 			getGame().popState();
 			return;
 		}
@@ -545,12 +520,5 @@ void MainState::update()
 	}
 
 	// Rendering
-	if( player->isDead() && deadPlayer != nullptr )
-	{
-		render(/*deadPlayer*/);
-	}
-	else
-	{
-		render(/*player*/);
-	}
+	render();
 }

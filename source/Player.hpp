@@ -23,13 +23,14 @@ public:
 	{
 		PHASE_DEFAULT,    /**< Default phase. Player behaves as normal. */
 
+		PHASE_DEAD,       /**< The player has died. */
 		PHASE_TRANSFORM,  /**< Changing state from a powerup or hit from an enemy. */
 		PHASE_WARP_ENTER, /**< Entering via warp pipe. */
 		PHASE_WARP_EXIT,  /**< Exiting via warp pipe. */
 	};
 
 	/**
-	 * The state that the player can be in.
+	 * The powerup state that the player can be in.
 	 */
 	enum State
 	{

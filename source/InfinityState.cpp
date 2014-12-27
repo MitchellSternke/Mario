@@ -17,6 +17,8 @@
 #include "LevelGenerators/SimpleLevelGenerator.hpp"
 #include "LevelGenerators/TestLevelGenerator.hpp"
 
+static const int BG_COLOR_CYCLE_FRAMES = 720; /**< The number of frames in a complete cycle of the background colors that are rendered. */
+
 InfinityState::InfinityState() :
 	fadeInProgress(0),
 	fadeOutProgress(0),
@@ -125,7 +127,8 @@ void InfinityState::onResume()
 
 void InfinityState::render()
 {
-	renderClearScreen();
+	Color backgroundColor = Color::hsv( (getGame().getFrameCount() % BG_COLOR_CYCLE_FRAMES) / (float)BG_COLOR_CYCLE_FRAMES, 1.0f, 1.0f );
+	renderClearScreen( backgroundColor.normalizedR(), backgroundColor.normalizedG(), backgroundColor.normalizedB() );
 	renderSetUnitsToPixels();
 
 	// Draw status information

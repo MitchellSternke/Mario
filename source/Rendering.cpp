@@ -23,7 +23,7 @@ void renderClampView( double& viewX, double& viewY, double viewWidth, double vie
 	}
 }
 
-void renderClearScreen()
+void renderClearScreen( float r, float g, float b, float a )
 {
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LEQUAL);
@@ -35,7 +35,7 @@ void renderClearScreen()
 	glEnable(GL_COLOR_MATERIAL);
 	glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 
-	glClearColor(0.0f, 0.0f, 0.0f, 0.5f);
+	glClearColor(r, g, b, a);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 }

@@ -21,6 +21,11 @@ public:
 	~Game();
 
 	/**
+	 * Get the number of frames that have been executed since the program started.
+	 */
+	int getFrameCount() const;
+
+	/**
 	 * Check if the Game is still running.
 	 *
 	 * @return whether there is a GameState on the stack.
@@ -60,6 +65,7 @@ public:
 
 private:
 	std::list<GameState*> deadStateList;
+	int                   frameCount;
 	std::list<GameState*> stateStack;
 };
 

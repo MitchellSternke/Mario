@@ -19,8 +19,13 @@ void renderClampView( double& viewX, double& viewY, double viewWidth, double vie
 
 /**
  * Clear the screen and set appropriate OpenGL settings.
+ *
+ * @param r the red component of the clear color.
+ * @param g the green component of the clear color.
+ * @param b the blue component of the clear color.
+ * @param a the alpha component of the clear color.
  */
-void renderClearScreen();
+void renderClearScreen( float r = 0.0f, float g = 0.0f, float b = 0.0f, float a = 0.5f);
 
 /**
  * Get the height of the screen in pixels.

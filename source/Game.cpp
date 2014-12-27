@@ -2,7 +2,8 @@
 #include "GameState.hpp"
 #include "Globals.hpp"
 
-Game::Game( GameState* initialState )
+Game::Game( GameState* initialState ) :
+	frameCount(0)
 {
 	pushState( initialState );
 }
@@ -18,6 +19,11 @@ Game::~Game()
 	{
 		delete (*it);
 	}
+}
+
+int Game::getFrameCount() const
+{
+	return frameCount;
 }
 
 bool Game::isRunning() const
@@ -74,4 +80,6 @@ void Game::update()
 	{
 		FPS_MANAGER.update();
 	}
+
+	frameCount++;
 }

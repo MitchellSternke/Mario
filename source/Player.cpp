@@ -1774,6 +1774,9 @@ void Player::reset()
 	setMotionEnabled(true);
 	setLayer(0);
 
+	setMaximumXSpeed(0.0);
+	setMaximumYSpeed(MAX_JUMP_VELOCITY);
+
 	camera.setPosition(getX(), getY());
 	cameraOrientation = 1;
 	orientationChangePosition = getX();
@@ -1796,6 +1799,7 @@ void Player::setPhase( Phase phase )
 		break;
 
 	case PHASE_DEAD:
+		climbing = false;
 		if( getTop() > 0.0 )
 		{
 			setAnimation( "player_dead" );
@@ -1805,6 +1809,8 @@ void Player::setPhase( Phase phase )
 			setAnimation(nullptr);
 		}
 		setCollisionsEnabled(false);
+		setMaximumXSpeed(0.0);
+		setMaximumYSpeed(MAX_JUMP_VELOCITY);
 		setXVelocity(0.0);
 		setXAcceleration(0.0);
 		setYVelocity(DEAD_PLAYER_INITIAL_VELOCITY);

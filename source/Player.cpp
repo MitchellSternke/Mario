@@ -363,6 +363,11 @@ bool Player::isClimbing()
 	return climbing;
 }
 
+bool Player::isClimbingLadder() const
+{
+	return climbing;
+}
+
 bool Player::isDead() const
 {
 	return dead;

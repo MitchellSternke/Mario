@@ -107,6 +107,11 @@ public:
 	bool isAscending() const;
 
 	/**
+	 * Check whether the player is currently climbing a ladder tile.
+	 */
+	bool isClimbingLadder() const;
+
+	/**
 	 * Check if the player has died.
 	 */
 	bool isDead() const;
@@ -317,7 +322,7 @@ private:
 	void decrementFireballCount();
 	void grow();
 	void holdSprite( Sprite* sprite );
-	bool isClimbing();
+	bool isClimbing(); /**< @todo this should be renamed since it is misleading. */
 	bool isSolidTileAbove() const;
 	void loadAnimations( State state );
 	void onButtonToggle( InputButton button, bool pressed );

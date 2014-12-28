@@ -373,7 +373,7 @@ void Block::onCollision(Sprite& sprite, Edge edge)
 	Player* player = dynamic_cast<Player*>(&sprite);
 	if( player != nullptr )
 	{
-		if( edge == EDGE_BOTTOM )
+		if( edge == EDGE_BOTTOM && !player->isClimbingLadder() )
 		{
 			if( player->getState() != Player::SMALL )
 			{

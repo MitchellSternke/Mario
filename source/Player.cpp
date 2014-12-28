@@ -26,8 +26,8 @@
 #include "World.hpp"
 
 ///@todo these were taken from MainState.cpp. Find a better place to put them.
-#define VIEW_WIDTH (SETTINGS.screenWidth / (SETTINGS.scale * (double)UNIT_SIZE))
-#define VIEW_HEIGHT (SETTINGS.screenHeight / (SETTINGS.scale * (double)UNIT_SIZE))
+#define VIEW_WIDTH (SETTINGS.getRenderedScreenWidth() / (double)UNIT_SIZE)
+#define VIEW_HEIGHT (SETTINGS.getRenderedScreenHeight() / (double)UNIT_SIZE)
 
 static const double DEAD_PLAYER_INITIAL_VELOCITY = 16.0; /**< The initial y velocity of the player upon death. */
 static const double DEAD_PLAYER_GRAVITY = -32.0;         /**< The gravity of the player when dead. */

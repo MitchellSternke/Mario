@@ -335,8 +335,8 @@ void MapState::onResume()
 void MapState::render() const
 {
 	// View settings computed at run
-	static const double VIEW_WIDTH = SETTINGS.screenWidth / (SETTINGS.scale * (double)HALF_UNIT_SIZE);
-	static const double VIEW_HEIGHT = SETTINGS.screenHeight / (SETTINGS.scale * (double)HALF_UNIT_SIZE);
+	static const double VIEW_WIDTH = SETTINGS.getRenderedScreenWidth() / (double)HALF_UNIT_SIZE;
+	static const double VIEW_HEIGHT = SETTINGS.getRenderedScreenHeight() / (double)HALF_UNIT_SIZE;
 
 	// Clear and set OpenGL settings
 	renderClearScreen();

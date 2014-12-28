@@ -25,8 +25,8 @@
 #include "Tile.hpp"
 #include "World.hpp"
 
-#define VIEW_WIDTH (SETTINGS.screenWidth / (SETTINGS.scale * (double)UNIT_SIZE))
-#define VIEW_HEIGHT (SETTINGS.screenHeight / (SETTINGS.scale * (double)UNIT_SIZE))
+#define VIEW_WIDTH (SETTINGS.getRenderedScreenWidth() / (double)UNIT_SIZE)
+#define VIEW_HEIGHT (SETTINGS.getRenderedScreenHeight() / (double)UNIT_SIZE)
 
 MainState::MainState(int level) :
 	GameState(true),

@@ -20,6 +20,7 @@
 static const int BG_COLOR_CYCLE_FRAMES = 720; /**< The number of frames in a complete cycle of the background colors that are rendered. */
 
 InfinityState::InfinityState() :
+	GameState(true),
 	fadeInProgress(0),
 	fadeOutProgress(0),
 	levelNumber(0)

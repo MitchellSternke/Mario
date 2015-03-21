@@ -338,6 +338,7 @@ private:
 	void setReserveItem( State itemState );
 	void setState( State state, bool transformAnimation = false );
 	void shrink();
+	void updateCamera();
 };
 
 #endif // PLAYER_HPP

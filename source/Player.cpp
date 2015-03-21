@@ -1158,26 +1158,7 @@ void Player::onPostUpdate()
 	}
 
 	// Update the camera
-	if( !isFlying() )
-	{
-		camera.setYTarget(getBottom());
-		cameraLocked = true;
-	}
-	else if( (isFlying() && isPMeterFilled()) || isUnderwater() || isClimbing() || !cameraLocked )
-	{
-		camera.setYTarget(getCenterY());
-		cameraLocked = false;
-	}
-
-	if( (getX() - orientationChangePosition < -1.0 && cameraOrientation == 1) ||
-		(getX() - orientationChangePosition > 1.0 && cameraOrientation == -1 ) )
-	{
-		cameraOrientation = orientation;
-	}
-	camera.setXTarget( cameraOrientation + getCenterX() );
-
-	camera.setSpeed( getMaximumXSpeed() + 1.0 , getMaximumYSpeed() + 1.0 );
-	camera.update();
+	updateCamera();
 }
 
 ///@todo Clean this up!
@@ -2072,4 +2053,35 @@ void Player::takeDamage( bool fatal )
 		invincibilityTimer = INVINCIBILITY_DURATION;
 		playSound("powerdown");
 	}
+}
+
+void Player::updateCamera()
+{
+	/// @todo fix this to be like Super Mario World's camera someday
+#if 0
+	if( !isFlying() )
+	{
+		camera.setYTarget(getBottom());
+		cameraLocked = true;
+	}
+	else if( (isFlying() && isPMeterFilled()) || isUnderwater() || isClimbing() || !cameraLocked )
+	{
+		camera.setYTarget(getCenterY());
+		cameraLocked = false;
+	}
+
+	if( (getX() - orientationChangePosition < -1.0 && cameraOrientation == 1) ||
+		(getX() - orientationChangePosition > 1.0 && cameraOrientation == -1 ) )
+	{
+		cameraOrientation = orientation;
+	}
+	camera.setXTarget( cameraOrientation + getCenterX() );
+
+	camera.setSpeed( getMaximumXSpeed() + 1.0 , getMaximumYSpeed() + 1.0 );
+	camera.update();
+#else
+	camera.setSpeed(0.0, 0.0);
+	camera.setPosition(getCenterX(), getCenterY());
+	camera.update();
+#endif
 }

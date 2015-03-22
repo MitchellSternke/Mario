@@ -61,6 +61,15 @@
 	<frame animation="smb3_tiles" index="d9" />
 </animation>
 
+<animation id="smb3_lava">
+	<frame animation="smb3_tiles" index="1e4" time="10" />
+	<frame animation="smb3_tiles" index="1e5" />
+	<frame animation="smb3_tiles" index="1e6" />
+	<frame animation="smb3_tiles" index="1e7" />
+	<frame animation="smb3_tiles" index="1e6" />
+	<frame animation="smb3_tiles" index="1e5" />
+</animation>
+
 <animation id="coin">
 	<frame image="smb3_coin.png" w="6" h="16" time="8" />
 	<frame x="6" w="10" />
@@ -183,6 +192,11 @@
 	<frame x="327" y="840" mirror_y="1" />
 	<frame x="353" y="840" mirror_y="1" />
 	<frame x="375" y="840" mirror_y="1" />
+</animation>
+
+<animation id="smb3_muncher">
+	<frame image="smb3_enemies.png" x="15" y="1954" w="16" h="16" time="10" />
+	<frame x="65" />
 </animation>
 
 <animation id="mushroom">
@@ -879,6 +893,8 @@
 	<resource key="player_tail_descent" value="mario_tail_descent" />
 	<resource key="player_tail_spin" value="mario_tail_spin" />
 	<resource key="player_dead" value="mario_dead" />
+	<resource key="damage_block" value="smb3_muncher" />
+	<resource key="damage_block_fatal" value="smb3_lava" />
 	<resource key="goomba" value="goomba" />
 	<resource key="goomba_dead" value="goomba_dead" />
 	<resource key="koopa" value="koopa" />

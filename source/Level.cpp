@@ -9,6 +9,7 @@
 #include "Blaster.hpp"
 #include "Block.hpp"
 #include "Coin.hpp"
+#include "DamageBlock.hpp"
 #include "Flower.hpp"
 #include "Globals.hpp"
 #include "Goomba.hpp"
@@ -58,6 +59,8 @@ Level::Level(int width, int height) :
 
 	ignoreTiles.insert(TYPE_BLASTER);
 	ignoreTiles.insert(TYPE_BRICK);
+	ignoreTiles.insert(TYPE_DAMAGE_BLOCK);
+	ignoreTiles.insert(TYPE_DAMAGE_BLOCK_FATAL);
 	ignoreTiles.insert(TYPE_LADDER);
 	ignoreTiles.insert(TYPE_QUESTION_BLOCK);
 	ignoreTiles.insert(TYPE_WATER);
@@ -260,6 +263,12 @@ Tile* Level::createTile( int id ) const
 				tile = new Block( blockType );
 			}
 		}
+		break;
+	case TYPE_DAMAGE_BLOCK:
+		tile = new DamageBlock(false);
+		break;
+	case TYPE_DAMAGE_BLOCK_FATAL:
+		tile = new DamageBlock(true);
 		break;
 	case TYPE_GROUND:
 		tile = new Tile(TILE_SOLID, true);

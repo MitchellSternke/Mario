@@ -2020,25 +2020,29 @@ void Player::takeDamage( bool fatal )
 		return;
 	}
 
-	if( state == TAIL )
+	// We only need to deal with state changes if the damage was not fatal
+	if( !fatal )
 	{
-		setState(SUPER, true);
-	}
-	else if( state == FIRE )
-	{
-		setState(SUPER, true);
-	}
-	else if( state == SUPER )
-	{
-		setState(SMALL, true);
-		if( !fatal )
+		if( state == TAIL )
 		{
-			dropReserveItem();
+			setState(SUPER, true);
 		}
-	}
-	else
-	{
-		fatal = true;
+		else if( state == FIRE )
+		{
+			setState(SUPER, true);
+		}
+		else if( state == SUPER )
+		{
+			setState(SMALL, true);
+			if( !fatal )
+			{
+				dropReserveItem();
+			}
+		}
+		else
+		{
+			fatal = true;
+		}
 	}
 
 	if( fatal )

@@ -135,7 +135,7 @@ Level* TestLevelGenerator::generateLevel( int seed ) const
 	}
 #else
 	level->addTile(0, 0, TYPE_GROUND, 256, 1);
-#if 1
+#if 0
 	int block = level->addTile(4, 4, TYPE_QUESTION_BLOCK);
 	level->setTileData(block, "contents", "star");
 	//level->addSprite(7, 1, TYPE_SHELL);
@@ -191,7 +191,7 @@ Level* TestLevelGenerator::generateLevel( int seed ) const
 		level->addTile( 40 + x, 1, TYPE_BLASTER, 1, (x / 2) % 2 + 1);
 	}
 	level->addSprite( 2, 5, TYPE_LEVEL_END );
-#else
+#elif 0
 	int qb = level->addTile(3, 4, TYPE_QUESTION_BLOCK);
 	level->setTileData(qb, "contents", "growing_ladder");
 	level->addTile(3, 20, TYPE_BRICK);
@@ -274,6 +274,9 @@ Level* TestLevelGenerator::generateLevel( int seed ) const
 	}
 
 	level->addSprite( 175, 23, TYPE_LEVEL_END );
+#else
+	level->addTile(5, 1, TYPE_DAMAGE_BLOCK);
+	level->addTile(7, 1, TYPE_DAMAGE_BLOCK_FATAL);
 #endif
 #endif
 

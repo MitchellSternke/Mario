@@ -48,10 +48,10 @@ void InfinityState::generateNewLevel()
 
 	// Generate a new level
 	std::vector<LevelGenerator*> generators;
-	generators.push_back(new SimpleLevelGenerator);
-	generators.push_back(new HillyLevelGenerator);
+	//generators.push_back(new SimpleLevelGenerator);
+	//generators.push_back(new HillyLevelGenerator);
 	//generators.push_back(new SmbLevelLoader);
-	//generators.push_back(new TestLevelGenerator);
+	generators.push_back(new TestLevelGenerator);
 	Random random;
 	random.seedTime();
 	const std::vector<LevelTheme*>& themes = RESOURCE_MANAGER.getLevelThemes();
@@ -72,6 +72,11 @@ void InfinityState::generateNewLevel()
 	}
 
 	levelNumber++;
+
+	for( auto g : generators )
+	{
+		delete g;
+	}
 }
 
 void InfinityState::input()

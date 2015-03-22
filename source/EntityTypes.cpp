@@ -29,6 +29,8 @@ static void initializeStringSwitches()
 	tileNameSwitch.addString( "blaster", TYPE_BLASTER );
 	tileNameSwitch.addString( "block", TYPE_BLOCK );
 	tileNameSwitch.addString( "brick", TYPE_BRICK );
+	tileNameSwitch.addString( "damage_block", TYPE_DAMAGE_BLOCK );
+	tileNameSwitch.addString( "damage_block_fatal", TYPE_DAMAGE_BLOCK_FATAL );
 	tileNameSwitch.addString( "ground", TYPE_GROUND );
 	tileNameSwitch.addString( "ladder", TYPE_LADDER );
 	tileNameSwitch.addString( "ledge", TYPE_LEDGE );

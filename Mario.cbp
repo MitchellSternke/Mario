@@ -64,6 +64,8 @@
 		<Unit filename="source/Coin.hpp" />
 		<Unit filename="source/Color.cpp" />
 		<Unit filename="source/Color.hpp" />
+		<Unit filename="source/DamageBlock.cpp" />
+		<Unit filename="source/DamageBlock.hpp" />
 		<Unit filename="source/Enemy.cpp" />
 		<Unit filename="source/Enemy.hpp" />
 		<Unit filename="source/Entity.cpp" />

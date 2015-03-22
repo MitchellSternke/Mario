@@ -1,5 +1,6 @@
 #include <cmath>
 
+#include "DamageBlock.hpp"
 #include "Enemy.hpp"
 #include "Fireball.hpp"
 #include "Globals.hpp"
@@ -38,6 +39,15 @@ void Fireball::onCollision(Sprite& sprite, Edge edge)
 
 void Fireball::onCollision(Tile& tile, Edge edge)
 {
+	// Destroy fireballs when they hit damage blocks
+	DamageBlock* block = dynamic_cast<DamageBlock*>(&tile);
+	if( block != nullptr )
+	{
+		kill();
+		playSound("bump");
+		return;
+	}
+
 	if( edge == EDGE_BOTTOM )
 	{
 		setYVelocity(BOUNCE_VELOCITY);

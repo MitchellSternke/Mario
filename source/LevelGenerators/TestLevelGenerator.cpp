@@ -275,8 +275,8 @@ Level* TestLevelGenerator::generateLevel( int seed ) const
 
 	level->addSprite( 175, 23, TYPE_LEVEL_END );
 #else
-	level->addTile(5, 1, TYPE_DAMAGE_BLOCK);
-	level->addTile(7, 1, TYPE_DAMAGE_BLOCK_FATAL);
+	int block = level->addTile( 5, 5, TYPE_QUESTION_BLOCK );
+	level->setTileData(block, "contents", "mushroom_1up" );
 #endif
 #endif
 

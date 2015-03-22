@@ -803,6 +803,7 @@ void Player::onCollision(Sprite& sprite, Edge edge)
 		}
 		return;
 	}
+
 	Item* item = dynamic_cast<Item*>(&sprite);
 	if( item != nullptr )
 	{
@@ -821,12 +822,23 @@ void Player::onCollision(Sprite& sprite, Edge edge)
 				item = reserve->getItem();
 				reserve->kill();
 			}
-			if( dynamic_cast<Mushroom*>(item) != nullptr )
+
+			Mushroom* mushroom = dynamic_cast<Mushroom*>(item);
+			if( mushroom != nullptr )
 			{
-				setReserveItem(SUPER);
-				if( state == SMALL )
+				switch( mushroom->getType() )
 				{
-					setState( SUPER, true );
+					case MUSHROOM_SUPER:
+						setReserveItem(SUPER);
+						if( state == SMALL )
+						{
+							setState( SUPER, true );
+						}
+						break;
+
+					case MUSHROOM_1UP:
+						gainLives(1, mushroom->getRight(), mushroom->getBottom());
+						break;
 				}
 			}
 			else if( dynamic_cast<Flower*>(item) != nullptr )

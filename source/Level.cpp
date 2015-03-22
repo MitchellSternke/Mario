@@ -157,6 +157,9 @@ Sprite* Level::createSprite( int id ) const
 	case TYPE_MUSHROOM:
 		sprite = new Mushroom;
 		break;
+	case TYPE_MUSHROOM_1UP:
+		sprite = new Mushroom(MUSHROOM_1UP);
+		break;
 	case TYPE_PARATROOPA:
 		sprite = new Paratroopa;
 		break;
@@ -236,6 +239,9 @@ Tile* Level::createTile( int id ) const
 				{
 				case TYPE_MUSHROOM:
 					s = new Mushroom;
+					break;
+				case TYPE_MUSHROOM_1UP:
+					s = new Mushroom(MUSHROOM_1UP);
 					break;
 				case TYPE_FLOWER:
 					tile = new Block( blockType, BLOCK_FLOWER );

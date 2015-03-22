@@ -19,6 +19,7 @@ static void initializeStringSwitches()
 	spriteNameSwitch.addString( "leaf", TYPE_LEAF );
 	spriteNameSwitch.addString( "level_end", TYPE_LEVEL_END );
 	spriteNameSwitch.addString( "mushroom", TYPE_MUSHROOM );
+	spriteNameSwitch.addString( "mushroom_1up", TYPE_MUSHROOM_1UP );
 	spriteNameSwitch.addString( "paratroopa", TYPE_PARATROOPA );
 	spriteNameSwitch.addString( "plant", TYPE_PLANT );
 	spriteNameSwitch.addString( "shell", TYPE_SHELL );

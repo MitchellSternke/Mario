@@ -225,6 +225,10 @@
 	<frame image="smb3_items.png" x="135" w="15" h="16" />
 </animation>
 
+<animation id="smb3_mushroom_1up">
+	<frame image="smb3_items.png" x="45" y="45" w="16" h="16" />
+</animation>
+
 <animation id="bush">
 	<frame image="smb3_tiles.png" x="119" w="16" h="16" />
 </animation>
@@ -922,6 +926,7 @@
 	<resource key="fireball" value="fireball" />
 	<resource key="star" value="star" />
 	<resource key="leaf" value="leaf" />
+	<resource key="mushroom_1up" value="smb3_mushroom_1up" />
 	<resource key="bush" value="bush" />
 	<resource key="ladder" value="smb3_vine" />
 	<resource key="growing_ladder" value="smb3_plant_head" />

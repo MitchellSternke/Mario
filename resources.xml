@@ -251,7 +251,7 @@
 </animation>
 
 <animation id="coin_particle">
-	<frame image="smb3_coin_particle.png" x="4" y="1" w="8" h="14" time="6" />
+	<frame image="smb3_coin_particle.png" x="4" y="1" w="8" h="14" time="2" />
 	<frame x="6" y="17" w="4" />
 	<frame x="8" y="33" w="1" />
 	<frame x="6" y="49" w="4" />

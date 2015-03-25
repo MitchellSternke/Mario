@@ -53,6 +53,7 @@ Block::CoinParticle::CoinParticle( Player* player ) :
 	setYAcceleration(COIN_PARTICLE_GRAVITY);
 	setYVelocity(COIN_PARTICLE_SPEED);
 	setMaximumYSpeed(COIN_PARTICLE_SPEED);
+	setAnimation("coin_particle");
 }
 
 void Block::CoinParticle::onDestroy()

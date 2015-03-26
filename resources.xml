@@ -62,12 +62,10 @@
 </animation>
 
 <animation id="smb3_lava">
-	<frame animation="smb3_tiles" index="1e4" time="10" />
+	<frame animation="smb3_tiles" index="1e4" time="8" />
 	<frame animation="smb3_tiles" index="1e5" />
 	<frame animation="smb3_tiles" index="1e6" />
 	<frame animation="smb3_tiles" index="1e7" />
-	<frame animation="smb3_tiles" index="1e6" />
-	<frame animation="smb3_tiles" index="1e5" />
 </animation>
 
 <animation id="coin">

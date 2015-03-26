@@ -2,7 +2,7 @@
 #include "Player.hpp"
 
 DamageBlock::DamageBlock( bool fatal ) :
-	Tile(TILE_SOLID),
+	Tile(fatal ? TILE_NONE : TILE_SOLID),
 	fatal(fatal)
 {
 	if( fatal )

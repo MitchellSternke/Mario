@@ -30,4 +30,3 @@ If you follow the path of execution from Main.cpp it should be self-explanitory 
 License
 -------
 I haven't formally decided on a license for this project yet.
-Seeing that it uses a lot of copyrighted Nintendo assets, I'd say it's public domain for now.

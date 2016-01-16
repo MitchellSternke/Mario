@@ -146,21 +146,25 @@ bool World::doSpriteCollisionXAxisTest(Sprite* sprite, const Vector2<double>& ol
 					Tile* tile = cell->tile;
 					if( velocity.x > 0 &&
 						position.x + size.x > tile->x - std::fabs(tile->x) * DOUBLE_EPSILON &&
-						oldPosition.x + size.x <= tile->x + EPSILON * EPSILON &&
-						getCellEdgeState(x, y, EDGE_LEFT) == true )
+						oldPosition.x + size.x <= tile->x + EPSILON * EPSILON )
 					{
+						if( getCellEdgeState(x, y, EDGE_LEFT) == true )
+						{
+							position.x = tile->x - size.x;
+							stop = true;
+						}
 						collisionTiles.insert(tile);
-						position.x = tile->x - size.x;
-						stop = true;
 					}
 					else if( velocity.x < 0 &&
 						position.x - std::fabs(position.x) * DOUBLE_EPSILON < tile->x + tile->width &&
-						oldPosition.x + EPSILON * EPSILON >= tile->x + tile->width &&
-						getCellEdgeState(x, y, EDGE_RIGHT) == true )
+						oldPosition.x + EPSILON * EPSILON >= tile->x + tile->width )
 					{
+						if( getCellEdgeState(x, y, EDGE_RIGHT) == true )
+						{
+							position.x = tile->x + tile->width;
+							stop = true;
+						}
 						collisionTiles.insert(tile);
-						position.x = tile->x + tile->width;
-						stop = true;
 					}
 				}
 			}
@@ -413,26 +417,30 @@ bool World::doSpriteCollisionYAxisTest(Sprite* sprite, const Vector2<double>& ol
 					Tile* tile = cell->tile;
 					if( velocity.y > 0 &&
 						position.y + size.y > tile->y - std::fabs(tile->y) * DOUBLE_EPSILON &&
-						oldPosition.y + size.y <= tile->y + std::fabs(tile->y) * DOUBLE_EPSILON &&
-						getCellEdgeState(x, y, EDGE_BOTTOM) == true )
+						oldPosition.y + size.y <= tile->y + std::fabs(tile->y) * DOUBLE_EPSILON )
 					{
+						if( getCellEdgeState(x, y, EDGE_BOTTOM) == true )
+						{
+							//position.y = tile->y - size.y;
+							newY = tile->y - size.y;
+							stop = true;
+						}
 						collisionTiles.insert(tile);
-						//position.y = tile->y - size.y;
-						newY = tile->y - size.y;
-						stop = true;
 					}
 					else if( velocity.y < 0 &&
 						position.y - std::fabs(position.y) * DOUBLE_EPSILON < tile->y + tile->height &&
-						oldPosition.y + std::fabs(oldPosition.y) * DOUBLE_EPSILON >= tile->y + tile->height &&
-						getCellEdgeState(x, y, EDGE_TOP) == true )
+						oldPosition.y + std::fabs(oldPosition.y) * DOUBLE_EPSILON >= tile->y + tile->height )
 					{
-						collisionTiles.insert(tile);
-						// Override - this allows "sinking" into slopes from adjacent tiles
-						if( !slope )
+						if( getCellEdgeState(x, y, EDGE_TOP) == true )
 						{
-							newY = tile->y + tile->height;
-							stop = true;
+							// Override - this allows "sinking" into slopes from adjacent tiles
+							if( !slope )
+							{
+								newY = tile->y + tile->height;
+								stop = true;
+							}
 						}
+						collisionTiles.insert(tile);
 					}
 				}
 			}

@@ -5,7 +5,7 @@
 
 void renderClampView( double& viewX, double& viewY, double viewWidth, double viewHeight, int width, int height )
 {
-	if( viewX - viewWidth / 2.0 < 0 )
+	if( width < viewWidth || viewX - viewWidth / 2.0 < 0 )
 	{
 		viewX = viewWidth / 2.0;
 	}
@@ -13,7 +13,7 @@ void renderClampView( double& viewX, double& viewY, double viewWidth, double vie
 	{
 		viewX = static_cast<double>(width) - viewWidth / 2.0;
 	}
-	if( viewY - viewHeight / 2.0 < 0 )
+	if( height < viewHeight || viewY - viewHeight / 2.0 < 0 )
 	{
 		viewY = viewHeight / 2.0;
 	}

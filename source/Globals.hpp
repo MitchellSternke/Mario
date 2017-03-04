@@ -55,7 +55,8 @@ extern void* window; /**< Handle to the SDL2 window. */
 
 #define GAME_TITLE "Mario"
 
-static const double GAME_FPS = 60.0;          /**< Frames per second that the Game runs at. */
+// @richelbilderbeek: changed const to constexpr
+static constexpr double GAME_FPS = 60.0;          /**< Frames per second that the Game runs at. */
 constexpr double GAME_DELTA = 1.0 / GAME_FPS; /**< Delta (change in time) between each frame. */
 
 static const int UNIT_SIZE = 16;     /**< The number of pixels in one world unit. */

@@ -1,0 +1,7 @@
+resources/*.mp3
+resources/*.wav
+resources/*.png
+resources/smb3_bg/
+Mario
+log.txt
+*.pro.user

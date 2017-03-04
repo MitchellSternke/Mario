@@ -3,6 +3,8 @@ Mario
 
 A C++ clone of the classic Super Mario Bros. games.
 
+![Screenshot](Mario.png)
+
 Compiling
 ---------
 You will need a compiler supporting C++11.

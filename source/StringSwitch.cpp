@@ -1,4 +1,5 @@
-#include "stringswitch.hpp"
+// @richelbilderbeek: corrected case
+#include "StringSwitch.hpp"
 
 using std::map;
 using std::string;
